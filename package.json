@@ -2,11 +2,6 @@
   "name": "a11y-tests",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-scripts": "3.0.0"
-  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -27,5 +22,16 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "dependencies": {
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
+    "react-scripts": "3.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "11.13.7",
+    "@types/react": "16.8.14",
+    "@types/react-dom": "16.8.4",
+    "typescript": "3.4.5"
   }
 }
