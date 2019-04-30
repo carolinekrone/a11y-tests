@@ -24,8 +24,14 @@
     ]
   },
   "dependencies": {
+    "bridge-react": "1.0.0-alpha.129",
+    "emotion": "10.0.9",
+    "final-form": "4.12.0",
+    "moment": "2.24.0",
     "react": "16.8.6",
     "react-dom": "16.8.6",
+    "react-final-form": "4.1.0",
+    "react-router-dom": "5.0.0",
     "react-scripts": "3.0.0"
   },
   "devDependencies": {
