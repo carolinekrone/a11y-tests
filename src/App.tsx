@@ -1,25 +1,29 @@
-import React from "react";
 import {
-  VFlow,
-  HFlow,
-  Heading,
   Button,
   ButtonGroup,
-  Tabs,
-  TabLink,
-  Link,
-  Checkbox,
-  ThemeProvider,
+  Cell,
+  createTheme,
   Grid,
-  Cell
+  Heading,
+  Link,
+  ThemeProvider,
+  VFlow
 } from "bridge-react";
+import React from "react";
+import { ThemeConfig } from "bridge-react/lib/styles/theme/createTheme";
 
 //import { MemoryRouter } from "react";
 
 function App() {
-  const newLocal = <Cell />;
+  const themeConfig: ThemeConfig = {
+    typography: {
+      sizes: {
+        html: 16
+      }
+    }
+  };
   return (
-    <ThemeProvider>
+    <ThemeProvider theme={createTheme(themeConfig)}>
       <VFlow>
         <div id="content" role="main">
           <section>
@@ -49,13 +53,13 @@ function App() {
           <section className="blueSection">
             <Grid wrap>
               <Cell xs={12} lg={6} alignSelf="center">
-                <Heading level={2} style={{ fontSize: 32 }}>
+                <Heading level={2} style={{ fontSize: "2rem" }}>
                   O que é acessiblidade?
                 </Heading>
                 <blockquote cite="https://www.who.int/topics/disabilities/en">
                   É a qualidade que torna uma experiência aberta a todos.
                 </blockquote>
-                <p style={{ fontWeight: "normal", fontSize: 20 }}>
+                <p style={{ fontWeight: "normal", fontSize: "1.25rem" }}>
                   A deficiência não é apenas um problema de saúde. É um fenômeno
                   complexo, refletindo a interação entre as características do
                   corpo de uma pessoa e as características da sociedade em que
@@ -73,7 +77,7 @@ function App() {
                 <img
                   style={{ width: 463, height: 347 }}
                   src={require("./static/image/default.png")}
-                  alt="Uma ilustração de uma pessoa olhando a tela de um computador. Ao seu lado um robo projeando as imagens na tela "
+                  alt="Uma ilustração de uma pessoa olhando a tela de um computador. Ao seu lado um robo projetando as imagens na tela "
                 />
               </Cell>
             </Grid>
@@ -86,7 +90,7 @@ function App() {
               alignItems="center"
             >
               <Cell xs={12} lg={6}>
-                <Heading level={2} style={{ fontSize: 32 }}>
+                <Heading level={2} style={{ fontSize: "2rem" }}>
                   Tipos de deficiência
                 </Heading>
               </Cell>
@@ -127,7 +131,7 @@ function App() {
                   <img
                     style={{ mixBlendMode: "multiply" }}
                     src={require("./static/image/temporaria.png")}
-                    alt="Uma ilustração de uma pessoa olhando a tela de um computador. Ao seu lado um robo projeando as imagens na tela "
+                    alt="Uma ilustração de uma pessoa olhando a tela de um computador. Ao seu lado um robo projetando as imagens na tela "
                   />
                 </div>
               </Cell>
