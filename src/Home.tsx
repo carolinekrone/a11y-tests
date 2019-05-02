@@ -1,6 +1,8 @@
+import React from "react";
+import FormDemo from "./form";
+import TabChecklist from "./TabChecklist";
+import TiposSwitcher from "./TiposSwitcher";
 import {
-  Button,
-  ButtonGroup,
   Cell,
   Grid,
   Heading,
@@ -9,9 +11,9 @@ import {
   useStyles,
   VFlow,
   DropdownButton,
-  Icon
+  Icon,
+  TextInput
 } from "bridge-react";
-import React from "react";
 
 function Home() {
   const { classes } = useStyles(createStyles);
@@ -19,19 +21,23 @@ function Home() {
   return (
     <>
       <header className={classes.header}>
-        <Grid direction="row" justifyContent="space-evenly" wrap>
-          <Cell flexGrow={2} xs={12} lg={6} alignSelf="center">
+        <Grid direction="row" justifyContent="space-between">
+          <Cell xs={6} lg={6} alignSelf="center">
             <img
               src={require("./static/image/logo-Ad.svg")}
               alt="Logo Acessibilidade Digital"
             />
           </Cell>
-          <Cell xs={12} lg={6} alignSelf="center">
-            <input
+          <Cell xs={4} lg={4} alignSelf="center">
+            <TextInput
+              style={classes.searchInput}
               type="search"
+              icon="zoomOutline"
+              iconPosition="left"
               placeholder="Buscar na página"
-              className={classes.search}
             />
+          </Cell>
+          <Cell xs={2} lg={2} alignSelf="center">
             <DropdownButton
               size="small"
               kind="normal"
@@ -60,23 +66,25 @@ function Home() {
                   <p className={classes.pBig}>
                     Nós criamos esse site para introduzir você no assunto da
                     acessibilidade digital. Aqui você vai entender mais sobre os
-                    tipos de deficiência, sobre as responsabilidades de cada
-                    pessoa envolvida no projeto..
+                    tipos de deficiência e sobre as responsabilidades de cada
+                    pessoa envolvida em um projeto digital. Ainda criamos uma
+                    sessão com recursos que são úteis para quem está começando
+                    na área.
                   </p>
                 </div>
               </Cell>
               <Cell xs={12} lg={6}>
                 <img
-                  style={{ width: 539, height: 303 }}
+                  style={{ width: 526, height: 323 }}
                   src={require("./static/image/default.png")}
-                  alt="Ilustração de duas mãos com objetos abstratos. No centro da imagem está escrito: Breaking down barries."
+                  alt="Ilustração de duas pessoas. Uma está sentada no canto esquerdo da imagem segurando um tablet e a outra é cadeirante e está no canto esquerdo da imagem. "
                 />
               </Cell>
             </Grid>
           </section>
           <section className={classes.blueSection} id="Definicao">
-            <Grid wrap>
-              <Cell xs={12} lg={6} alignSelf="center">
+            <Grid direction="row">
+              <Cell xs={12} lg={5} alignSelf="center">
                 <Heading level={2}>O que é acessiblidade?</Heading>
                 <blockquote
                   className={classes.blockquote}
@@ -98,11 +106,11 @@ function Home() {
                   </Link>
                 </p>
               </Cell>
-              <Cell xs={6} alignSelf="flex-end">
+              <Cell xs={12} sm={6} lg={7}>
                 <img
-                  style={{ width: 463, height: 347 }}
-                  src={require("./static/image/default.png")}
-                  alt="Uma ilustração de uma pessoa olhando a tela de um computador. Ao seu lado um robo projetando as imagens na tela "
+                  style={{ width: 526, height: 285, marginLeft: "7rem" }}
+                  src={require("./static/image/acessibilidade.png")}
+                  alt="Ilustração de uma pessoa cega atravessando uma faixa com uma bengala."
                 />
               </Cell>
             </Grid>
@@ -127,45 +135,162 @@ function Home() {
                 </div>
               </Cell>
               <Cell>
-                <ButtonGroup>
-                  <Button size="small" kind="primary">
-                    {" "}
-                    Permanente
-                  </Button>
-                  <Button size="small">Temporária</Button>
-                  <Button size="small">Situacional</Button>
-                </ButtonGroup>
-              </Cell>
-              <Cell>
-                <div className={classes.graySection}>
-                  <Heading level={3}>Às vezes a exclusão é temporária</Heading>
-                  <p className={classes.pSmall}>
-                    Mesmo uma lesão ou contexto de curto prazo afeta a maneira
-                    como as pessoas interagem com o mundo ao seu redor, mesmo
-                    que apenas por um curto período de tempo. Pense em olhar
-                    para uma luz brilhante, usar um elenco ou pedir um jantar em
-                    um país estrangeiro.
-                  </p>
-                  <img
-                    style={{ mixBlendMode: "multiply" }}
-                    src={require("./static/image/temporaria.png")}
-                    alt="Uma ilustração de uma pessoa olhando a tela de um computador. Ao seu lado um robo projetando as imagens na tela "
-                  />
-                </div>
+                <TiposSwitcher />
               </Cell>
             </Grid>
           </section>
-          <section
-            className={classes.newsletter}
-            style={{ textAlign: "center" }}
-            id="Newsletter"
-          >
-            <Heading level={2}>Se inscreva na nossa newsleteer</Heading>
-            <p className={classes.p}>
-              Receba o que há de mais novo sobre acessibilidade digital.
-              Prometemos enviar somente o necessário, nada de spams!
-            </p>
-            <div />
+          <section className={classes.section}>
+            <VFlow>
+              <Heading level={2}>Checklist</Heading>
+              <p className={classes.p}>
+                Tornar o seu produto acessível cria uma experiência melhor para
+                todo mundo. <br />
+                Use este checklist para ajudar a checar a acessibilidade
+                projeto, independentemente de sua função ou estágio de andamento
+                do projeto.
+              </p>
+              <TabChecklist />
+            </VFlow>
+          </section>
+          <section className={classes.section}>
+            <VFlow>
+              <Heading level={2}>Dados sobre deficiência no Brasil</Heading>
+
+              <Grid direction="row" alignItems="flex-start" wrap>
+                <Cell lg={1} alignSelf="center">
+                  <Icon icon="mapFilled" fill="primary" size={3} />
+                </Cell>
+                <Cell lg={11}>
+                  {" "}
+                  <p className={classes.pBig}>
+                    <b>1 Bilhão</b> = 10% de pessoas em todo mundo convivem com
+                    alguma deficiência
+                  </p>
+                </Cell>
+                <Cell lg={1} alignSelf="flex-start">
+                  <Icon icon="mapMarkerFilled" fill="primary" size={3} />
+                </Cell>
+                <Cell lg={11}>
+                  <p className={classes.pBig}>
+                    No Brasil, <b>45,6 milhões de pessoas</b> (23,9%) têm algum
+                    tipo de deficiência. Sendo:
+                  </p>
+                  <p className={classes.p}>
+                    <b>18,6%</b> deficiência visual
+                  </p>
+                  <p className={classes.p}>
+                    <b>7%</b> deficiência motora
+                  </p>
+                  <p className={classes.p}>
+                    <b>5,10%</b> deficiência auditiva
+                  </p>
+                  <p className={classes.p}>
+                    <b>7% </b>deficiência mental ou intelectual
+                  </p>
+                </Cell>
+                <Cell lg={1} alignSelf="center">
+                  <Icon icon="desktopFilled" fill="primary" size={3} />
+                </Cell>
+                <Cell lg={11}>
+                  <p className={classes.pBig}>
+                    <b>97,8% </b>das páginas tiveram falhas detectadas na WCAG
+                    2, com uma média de <b>59,6</b> erros por página.
+                  </p>
+                </Cell>
+                <Cell lg={1}>
+                  <Icon icon="chatFilled" fill="primary" size={3} />
+                </Cell>
+                <Cell lg={11}>
+                  <p className={classes.pBig}>
+                    De 2009 a 2017 o uso de leitor de tela{" "}
+                    <b>aumentou de 12% para 88%.</b>
+                  </p>
+                </Cell>
+              </Grid>
+            </VFlow>
+          </section>
+          <section className={classes.section}>
+            <VFlow>
+              <Heading level={2}>Recursos</Heading>
+              <p className={classes.p}>
+                Nós certamente não somos especialistas em termos das melhores
+                abordagens para acessibilidade. A maior parte do trabalho
+                realizado pela nossa equipe é baseada em uma grande quantidade
+                de pesquisas e referências. Abaixo estão alguns dos nossos
+                recursos favoritos.
+              </p>
+              <br />
+              <Grid direction="row" alignItems="center">
+                <Cell /> <Icon icon="link" fill="primary" />
+                <Cell>
+                  <Heading level={3}>Sites</Heading>
+                </Cell>
+              </Grid>
+              <p className={classes.p}>
+                Web Content Accessibility Guidelines (WCAG) 2.0 -{" "}
+                <Link href="https://www.w3.org/TR/WCAG20/">W3C</Link>
+              </p>
+
+              <p className={classes.p}>
+                Web Accessibility in Mind -{" "}
+                <Link href="https://webaim.org/">Webaim</Link>
+              </p>
+              <p className={classes.p}>
+                Movimento Web para todos -{" "}
+                <Link href="http://mwpt.com.br/">MWPT</Link>
+              </p>
+              <p className={classes.p}>
+                Todos por acessibilidade -{" "}
+                <Link href="http://acessibilida.de/">Acessibilida.de</Link>
+              </p>
+              <br />
+              <Grid direction="row" alignItems="center">
+                <Cell /> <Icon icon="rocket" fill="primary" />
+                <Cell>
+                  <Heading level={3}>Cursos</Heading>
+                </Cell>
+              </Grid>
+              <p className={classes.p}>
+                Web Accessibility: Developing with Empathy -{" "}
+                <Link href="https://www.udacity.com/course/web-accessibility--ud891">
+                  Udacity
+                </Link>
+              </p>
+              <br />
+
+              <Grid direction="row" alignItems="center">
+                <Cell /> <Icon icon="gearFilled" fill="primary" />
+                <Cell>
+                  <Heading level={3}>Ferramentas</Heading>
+                </Cell>
+              </Grid>
+              <p className={classes.p}>
+                The Persona Spectrum -{" "}
+                <Link href="https://www.microsoft.com/design/">
+                  Microsoft Design
+                </Link>
+              </p>
+              <p className={classes.p}>
+                Color Contrast Checker -
+                <Link href="https://webaim.org/resources/contrastchecker/">
+                  Webaim
+                </Link>
+              </p>
+            </VFlow>
+          </section>
+
+          <section className={classes.newsletter} id="Newsletter">
+            <div style={{ textAlign: "center" }}>
+              <Heading level={2}>Se inscreva na nossa newsleteer</Heading>
+              <p className={classes.p}>
+                Receba notícias sobre o que há de mais novo em acessibilidade
+                digital. Prometemos enviar somente o necessário, nada de spams!
+              </p>
+            </div>
+            <div className={classes.card}>
+              {" "}
+              <FormDemo />
+            </div>
           </section>
         </div>
       </VFlow>
@@ -179,9 +304,11 @@ function Home() {
             <p>Versão 1.0</p>
           </Cell>
           <Cell xs={12} lg={6} alignSelf="center">
-            <p>
-              Site desenvolvido para Projeto de Conclusão em Design da
-              Universidade Federal de Santa Catarina. <br />
+            <p className={classes.pSmall}>
+              O site é Acessibilidade Digital é um Projeto de Conclusão em
+              Design da Universidade Federal de Santa Catarina, produzido por{" "}
+              <a href="https://twitter.com/carolinekrone">Caroline Krone</a>.{" "}
+              <br />
               Caso tenha alguma pergunta entre em contato pelo e-mail ou abra
               uma issue no{" "}
               <Link
@@ -191,9 +318,7 @@ function Home() {
               >
                 GitHub
               </Link>
-              .
-            </p>
-            <p>
+              . <br />
               Este site foi construido utilizando os componentes do{" "}
               <Link
                 href="https://bold.bridge.ufsc.br/"
@@ -220,16 +345,20 @@ function createStyles(theme: Theme) {
       width: "100%",
       height: "5rem",
       backgroundColor: theme.pallete.gray.c100,
-      boxShadow: theme.shadows.outer[80]
+      boxShadow: theme.shadows.outer[40]
     },
     search: {
-      lineHeight: "2rem",
-      width: "50%",
-      marginRight: "1rem",
-      borderRadius: "2px",
-      borderStyle: "none",
-      borderColor: "initial",
-      borderImage: "initial"
+      flex: 1,
+      padding: "0 1rem"
+    },
+    searchInput: {
+      border: "none",
+      "~ span": {
+        background: theme.pallete.surface.main
+      },
+      "&::-webkit-search-decoration": {
+        WebkitAppearance: "none"
+      }
     },
     section: {
       margin: "5% 8%"
@@ -250,13 +379,11 @@ function createStyles(theme: Theme) {
     },
     p: {
       fontWeight: 400,
-      fontSize: 18,
-      marginTop: "1rem"
+      fontSize: 18
     },
     pSmall: {
       fontWeight: 400,
-      fontSize: 14,
-      margin: "1rem 0 2rem"
+      fontSize: 14
     },
     pBig: {
       fontWeight: 400,
@@ -270,24 +397,32 @@ function createStyles(theme: Theme) {
       fontStyle: "italic",
       "&::before": {
         display: "inline-block",
-        content: "",
+        content: '""',
         position: "absolute",
         margin: "0.875rem",
         left: "-6rem",
         width: "80px",
         height: "2px",
-        borderTop: "1px solid #000000"
+        borderTop: `2px solid ${theme.pallete.divider}`
       }
     },
     newsletter: {
+      justifyContent: "center",
       backgroundColor: theme.pallete.primary.c10,
-      padding: "4% 8%",
+      padding: "4% 10%",
       color: theme.pallete.gray.c100
     },
     card: {
+      color: theme.pallete.gray.c10,
       backgroundColor: theme.pallete.gray.c100,
-      boxShadow: "0px 6px 4px rgba(0,0,0,0.55)",
-      borderRadius: "4px"
+      boxShadow: theme.shadows.outer[160],
+      borderRadius: 4,
+      margin: "0 30%",
+      marginTop: "2rem",
+      padding: "2rem"
+    },
+    block: {
+      marginTop: "1rem"
     },
     footer: {
       backgroundColor: theme.pallete.gray.c10,
