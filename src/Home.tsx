@@ -32,6 +32,7 @@ function Home() {
             <TextInput
               style={classes.searchInput}
               type="search"
+              aria-label="Pesquisa"
               icon="zoomOutline"
               iconPosition="left"
               placeholder="Buscar na página"
@@ -39,6 +40,8 @@ function Home() {
           </Cell>
           <Cell xs={2} lg={2} alignSelf="center">
             <DropdownButton
+              aria-haspopup="true"
+              type="button"
               size="small"
               kind="normal"
               items={[
@@ -49,7 +52,7 @@ function Home() {
                 { content: "Newsletter", onClick: console.log }
               ]}
             >
-              <Icon icon="hamburguerMenu" />
+              <Icon icon="hamburguerMenu" aria-label="Menu" />
             </DropdownButton>
           </Cell>
         </Grid>
@@ -77,7 +80,7 @@ function Home() {
                 <img
                   style={{ width: 526, height: 323 }}
                   src={require("./static/image/default.png")}
-                  alt="Ilustração de duas pessoas. Uma está sentada no canto esquerdo da imagem segurando um tablet e a outra é cadeirante e está no canto esquerdo da imagem. "
+                  alt="Ilustração de duas pessoas. Uma está sentada no canto esquerdo da imagem segurando um tablet e a outra é cadeirante e está no canto esquerdo da imagem interagindo com um painel que contém circulos. "
                 />
               </Cell>
             </Grid>
@@ -98,6 +101,7 @@ function Home() {
                   corpo de uma pessoa e as características da sociedade em que
                   ela vive. Saiba mais no site da{" "}
                   <Link
+                    style={{ color: "white" }}
                     href="https://www.w3.org/WAI/"
                     target="_blank"
                     alt="Web Accessibility Initiative"
@@ -110,7 +114,7 @@ function Home() {
                 <img
                   style={{ width: 526, height: 285, marginLeft: "7rem" }}
                   src={require("./static/image/acessibilidade.png")}
-                  alt="Ilustração de uma pessoa cega atravessando uma faixa com uma bengala."
+                  alt="Ilustração de uma pessoa cega atravessando uma faixa de pedestre com o auxílio de uma bengala."
                 />
               </Cell>
             </Grid>
@@ -168,7 +172,12 @@ function Home() {
                   </p>
                 </Cell>
                 <Cell lg={1} alignSelf="flex-start">
-                  <Icon icon="mapMarkerFilled" fill="primary" size={3} />
+                  <Icon
+                    icon="mapMarkerFilled"
+                    fill="primary"
+                    size={3}
+                    aria-label=""
+                  />
                 </Cell>
                 <Cell lg={11}>
                   <p className={classes.pBig}>
@@ -281,7 +290,7 @@ function Home() {
 
           <section className={classes.newsletter} id="Newsletter">
             <div style={{ textAlign: "center" }}>
-              <Heading level={2}>Se inscreva na nossa newsleteer</Heading>
+              <Heading level={2}>Se inscreva na nossa newsletter</Heading>
               <p className={classes.p}>
                 Receba notícias sobre o que há de mais novo em acessibilidade
                 digital. Prometemos enviar somente o necessário, nada de spams!
@@ -307,11 +316,17 @@ function Home() {
             <p className={classes.pSmall}>
               O site é Acessibilidade Digital é um Projeto de Conclusão em
               Design da Universidade Federal de Santa Catarina, produzido por{" "}
-              <a href="https://twitter.com/carolinekrone">Caroline Krone</a>.{" "}
-              <br />
+              <a
+                href="https://twitter.com/carolinekrone"
+                style={{ color: "white" }}
+              >
+                Caroline Krone
+              </a>
+              . <br />
               Caso tenha alguma pergunta entre em contato pelo e-mail ou abra
               uma issue no{" "}
               <Link
+                style={{ color: "white" }}
                 href="https://github.com/carolinekrone/a11y-tests"
                 target="_blank"
                 alt="Página do projeto no GitHub"
@@ -321,6 +336,7 @@ function Home() {
               . <br />
               Este site foi construido utilizando os componentes do{" "}
               <Link
+                style={{ color: "white" }}
                 href="https://bold.bridge.ufsc.br/"
                 target="_blank"
                 alt="Design system Bold"

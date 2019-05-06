@@ -8,11 +8,13 @@ function Permanente() {
   return (
     <VFlow>
       <div className={classes.graySection}>
-        <Heading level={3}>A exclusão pode ser permanente </Heading>
-        <p className={classes.pSmall}>Uma pessoa pode ser</p>
+        <Heading level={3}>Muitas vezes a exclusão é permanente</Heading>
+        <p className={classes.pSmall}>
+          No Brasil, 23,9% da população possui alguma deficiência permanente.
+        </p>
         <img
           style={{ mixBlendMode: "multiply" }}
-          src={require("./static/image/temporaria.png")}
+          src={require("/Users/Carol/Documents/GitHub/a11y-tests/src/static/image/temporaria.png")}
           alt="Uma ilustração de uma pessoa olhando a tela de um computador. Ao seu lado um robo projetando as imagens na tela "
         />
       </div>

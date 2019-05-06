@@ -15,11 +15,6 @@ function Temporaria() {
           curto período de tempo. Pense em olhar para uma luz brilhante, usar um
           elenco ou pedir um jantar em um país estrangeiro.
         </p>
-        <img
-          style={{ mixBlendMode: "multiply" }}
-          src={require("./static/image/temporaria.png")}
-          alt="Uma ilustração de uma pessoa olhando a tela de um computador. Ao seu lado um robo projetando as imagens na tela "
-        />
       </div>
     </VFlow>
   );

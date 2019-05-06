@@ -2,14 +2,14 @@ import React from "react";
 import { MemoryRouter, Switch, Route, Redirect } from "react-router";
 
 import { ButtonGroup, Text, Button } from "bridge-react";
-import Temporaria from "./Temporaria";
-import Permanente from "./Permanente";
-import Situacional from "./Situacional";
+import Temporaria from "./Tipos/Temporaria";
+import Permanente from "./Tipos/Permanente";
+import Situacional from "./Tipos/Situacional";
 
 function TiposSwitcher() {
   return (
     <>
-      <MemoryRouter initialEntries={["/Permanente"]} initialIndex={1}>
+      <MemoryRouter initialEntries={["/Tipos/Permanente"]} initialIndex={1}>
         <ButtonGroup>
           <Button skin="default" kind="primary" size="small">
             <Text>Permanente</Text>
@@ -22,10 +22,10 @@ function TiposSwitcher() {
           </Button>
         </ButtonGroup>
         <Switch>
-          <Route path={`/Temporaria`} component={Temporaria} />
-          <Route path={`/Permanente`} component={Permanente} />
-          <Route path={`/Situacional`} component={Situacional} />
-          <Redirect exact from={`/`} to={`/Permanente`} />
+          <Route path={`/Tipos/Temporaria`} component={Temporaria} />
+          <Route path={`/Tipos/Permanente`} component={Permanente} />
+          <Route path={`/Tipos/Situacional`} component={Situacional} />
+          <Redirect exact from={`/`} to={`/Tipos/Permanente`} />
         </Switch>
       </MemoryRouter>
     </>

@@ -19,7 +19,7 @@ function Situacional() {
         </p>
         <img
           style={{ mixBlendMode: "multiply" }}
-          src={require("./static/image/temporaria.png")}
+          src={require("/Users/Carol/Documents/GitHub/a11y-tests/src/static/image/temporaria.png")}
           alt="Uma ilustração de uma pessoa olhando a tela de um computador. Ao seu lado um robo projetando as imagens na tela "
         />
       </div>
