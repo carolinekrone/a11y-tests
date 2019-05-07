@@ -20,6 +20,7 @@ function Home() {
 
   return (
     <>
+      <Link href="#content">Pule para o conteúdo principal</Link>
       <header className={classes.header}>
         <Grid direction="row" justifyContent="space-between">
           <Cell xs={6} lg={6} alignSelf="center">
@@ -148,7 +149,7 @@ function Home() {
           </section>
           <section className={classes.section} id="Checklist">
             <VFlow>
-              <Heading level={2}>Checklist</Heading>
+              <Heading level={2}>Checklist para projetos acessíveis</Heading>
               <p className={classes.p}>
                 Tornar o seu produto acessível cria uma experiência melhor para
                 todo mundo. <br />

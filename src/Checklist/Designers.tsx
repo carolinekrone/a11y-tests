@@ -20,12 +20,27 @@ function Designers() {
           </p>
         </Cell>
         <Cell>
-          <Checkbox label="Não utilize somente cor para transmitir infrmações importantes" />
+          <Checkbox label="Não utilize somente cor para transmitir informações importantes" />
           <p className={classes.pSmall}>
             Deve haver outro indicador (como ícones para acompanhar o código de
             cores ou um sublinhado no texto vinculado) para que as pessoas que
             não conseguem diferenciar as cores facilmente consigam entender e
             usar seu conteúdo.
+          </p>
+        </Cell>
+        <Cell>
+          <Checkbox label="Projete estados de foco para ajudar os usuários a navegar e entender onde eles estão" />
+          <p className={classes.pSmall}>
+            Seus projetos nunca devem ocultar ativamente os estados de foco.
+            Quando as pessoas usam o teclado para navegar, seu produto deve
+            incluir estados de foco altamente visíveis.
+          </p>
+        </Cell>
+        <Cell>
+          <Checkbox label="Escreva um bom texto alternativo para suas imagens" />
+          <p className={classes.pSmall}>
+            Descreva todos os elementos que explicam o que está acontecendo na
+            imagem, em vez de apenas definir o texto alternativo como "imagem".
           </p>
         </Cell>
       </Grid>

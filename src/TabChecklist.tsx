@@ -5,6 +5,9 @@ import { MemoryRouter, Switch, Route, Redirect } from "react-router";
 import { TabLink, Tabs } from "bridge-react";
 import Designers from "./Checklist/Designers";
 import Programadores from "./Checklist/Programadores";
+import Editores from "./Checklist/Editores";
+import QA from "./Checklist/QA";
+import Gestores from "./Checklist/Gestores";
 
 function TabChecklist() {
   const { classes } = useStyles(createStyles);
@@ -14,9 +17,7 @@ function TabChecklist() {
         <div className={classes.divider}>
           {" "}
           <Tabs>
-            <TabLink active={true} to="/Checklist/Designers">
-              Designers
-            </TabLink>
+            <TabLink to="/Checklist/Designers">Designers</TabLink>
             <TabLink to="/Checklist/Programadores">Programadores</TabLink>
             <TabLink to="/Checklist/Gestores">Gestores de Projeto</TabLink>
             <TabLink to="/Checklist/QA">QA - Garantia de Qualidade</TabLink>
@@ -27,6 +28,9 @@ function TabChecklist() {
         <Switch>
           <Route path={`/Checklist/Designers`} component={Designers} />
           <Route path={`/Checklist/Programadores`} component={Programadores} />
+          <Route path={`/Checklist/Editores`} component={Editores} />
+          <Route path={`/Checklist/QA`} component={QA} />
+          <Route path={`/Checklist/Gestores`} component={Gestores} />
           <Redirect exact from={`/`} to={`/Checklist/Designers`} />
         </Switch>
       </MemoryRouter>
