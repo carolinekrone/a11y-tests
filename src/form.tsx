@@ -93,9 +93,11 @@ const validate = (values: any) => {
   }
 
   if (!values.email) {
-    errors.lastName = "E-mail é obrigatório";
+    errors.email = "E-mail é obrigatório";
   }
-
+  if (values.email !== /^[a-zA-Z0-9]+@+[a-zA-Z0-9]+.+[A-z]/) {
+    errors.email = "Este endereço de e-mail não é válido";
+  }
   return errors;
 };
 

@@ -48,7 +48,10 @@ function Home() {
                 { content: "Acessibilidade", onClick: console.log },
                 { content: "Tipos de deficiência", onClick: console.log },
                 { content: "Checklist de requisitos", onClick: console.log },
-                { content: "Dados sobre acessibilidade", onClick: console.log },
+                {
+                  content: "Dados sobre acessibilidade",
+                  onClick: console.log
+                },
                 { content: "Newsletter", onClick: console.log }
               ]}
             >
@@ -143,7 +146,7 @@ function Home() {
               </Cell>
             </Grid>
           </section>
-          <section className={classes.section}>
+          <section className={classes.section} id="Checklist">
             <VFlow>
               <Heading level={2}>Checklist</Heading>
               <p className={classes.p}>
@@ -156,7 +159,7 @@ function Home() {
               <TabChecklist />
             </VFlow>
           </section>
-          <section className={classes.section}>
+          <section className={classes.section} id="Dados">
             <VFlow>
               <Heading level={2}>Dados sobre deficiência no Brasil</Heading>
 
@@ -314,8 +317,8 @@ function Home() {
           </Cell>
           <Cell xs={12} lg={6} alignSelf="center">
             <p className={classes.pSmall}>
-              O site é Acessibilidade Digital é um Projeto de Conclusão em
-              Design da Universidade Federal de Santa Catarina, produzido por{" "}
+              O site Acessibilidade Digital é um Projeto de Conclusão em Design
+              da Universidade Federal de Santa Catarina, produzido por{" "}
               <a
                 href="https://twitter.com/carolinekrone"
                 style={{ color: "white" }}

@@ -10,12 +10,13 @@ function Permanente() {
       <div className={classes.graySection}>
         <Heading level={3}>Muitas vezes a exclusão é permanente</Heading>
         <p className={classes.pSmall}>
-          No Brasil, 23,9% da população possui alguma deficiência permanente.
+          No Brasil, 23,9% da população possui alguma deficiência permanente. A
+          imagem abaixo apresenta exemplos de exclusões permanentes.
         </p>
         <img
           style={{ mixBlendMode: "multiply" }}
-          src={require("/Users/Carol/Documents/GitHub/a11y-tests/src/static/image/temporaria.png")}
-          alt="Uma ilustração de uma pessoa olhando a tela de um computador. Ao seu lado um robo projetando as imagens na tela "
+          src={require("/Users/Carol/Documents/GitHub/a11y-tests/src/static/image/permanente.png")}
+          alt="Desenho de quatro pessoas com exclusões permanentes. Da esquerda para direita: A primeira só tem um braço; A segunda é cega e tem um cão guia ao seu lado; A terceira é surda e a quarta é muda."
         />
       </div>
     </VFlow>

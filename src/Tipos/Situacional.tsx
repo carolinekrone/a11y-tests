@@ -19,8 +19,8 @@ function Situacional() {
         </p>
         <img
           style={{ mixBlendMode: "multiply" }}
-          src={require("/Users/Carol/Documents/GitHub/a11y-tests/src/static/image/temporaria.png")}
-          alt="Uma ilustração de uma pessoa olhando a tela de um computador. Ao seu lado um robo projetando as imagens na tela "
+          src={require("/Users/Carol/Documents/GitHub/a11y-tests/src/static/image/situacional.png")}
+          alt="Desenho de quatro pessoas com exclusões situacionais. Da esquerda para direita: A primeira tem um recém nascido no colo; A segunda é um motorista distraído; A terceira é um bartender em um ambiente barulhento e a quarta usa acessórios vikings e possui um sotaque pesado."
         />
       </div>
     </VFlow>

@@ -15,6 +15,11 @@ function Temporaria() {
           curto período de tempo. Pense em olhar para uma luz brilhante, usar um
           elenco ou pedir um jantar em um país estrangeiro.
         </p>
+        <img
+          style={{ mixBlendMode: "multiply" }}
+          src={require("/Users/Carol/Documents/GitHub/a11y-tests/src/static/image/temporaria.png")}
+          alt="Desenho de quatro pessoas com exclusões temporarias. Da esquerda para direita: A primeira tem um braço quebrado e usa gesso; A segunda tem catarata e usa bengala; A terceira possui infecção no ouvido e a quarta possui laringite."
+        />
       </div>
     </VFlow>
   );
