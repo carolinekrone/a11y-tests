@@ -20,7 +20,14 @@ function Home() {
 
   return (
     <>
-      <Link href="#content">Pule para o conteúdo principal</Link>
+      <a
+        href="#content"
+        className={classes.skiplink}
+        tabIndex={1}
+        style={{ position: "absolute" }}
+      >
+        Pule para o conteúdo principal
+      </a>
       <header className={classes.header}>
         <Grid direction="row" justifyContent="space-between">
           <Cell xs={6} lg={6} alignSelf="center">
@@ -319,13 +326,13 @@ function Home() {
           <Cell xs={12} lg={6} alignSelf="center">
             <p className={classes.pSmall}>
               O site Acessibilidade Digital é um Projeto de Conclusão em Design
-              da Universidade Federal de Santa Catarina, produzido por{" "}
-              <a
+              da Universidade Federal de Santa Catarina, produzido por
+              <Link
                 href="https://twitter.com/carolinekrone"
                 style={{ color: "white" }}
               >
                 Caroline Krone
-              </a>
+              </Link>
               . <br />
               Caso tenha alguma pergunta entre em contato pelo e-mail ou abra
               uma issue no{" "}
@@ -359,6 +366,20 @@ export default Home;
 
 function createStyles(theme: Theme) {
   return {
+    skiplink: {
+      clip: "rect(1px,1px,1px,1px)",
+      overflow: "hidden",
+      //position: "absolute",
+      padding: "1rem !important",
+      "&: focus": {
+        height: "auto",
+        width: "auto",
+        clip: "auto",
+        backgroundColor: theme.pallete.primary.c30,
+        color: theme.pallete.gray.c100,
+        fontSize: "1rem"
+      }
+    },
     header: {
       marginBottom: "1rem",
       padding: "1% 8% 1%",
@@ -417,13 +438,13 @@ function createStyles(theme: Theme) {
       fontStyle: "italic",
       "&::before": {
         display: "inline-block",
-        content: '""',
+        content: "",
         position: "absolute",
         margin: "0.875rem",
-        left: "-6rem",
+        left: "-1rem",
         width: "80px",
         height: "2px",
-        borderTop: `2px solid ${theme.pallete.divider}`
+        borderTop: `2px solid ${theme.pallete.gray.c100}`
       }
     },
     newsletter: {
