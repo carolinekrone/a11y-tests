@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.js": "/a11y-tests/static/js/main.c0c367b8.chunk.js",
+    "main.js.map": "/a11y-tests/static/js/main.c0c367b8.chunk.js.map",
+    "runtime~main.js": "/a11y-tests/static/js/runtime~main.e03c795b.js",
+    "runtime~main.js.map": "/a11y-tests/static/js/runtime~main.e03c795b.js.map",
+    "static/js/2.a93c5699.chunk.js": "/a11y-tests/static/js/2.a93c5699.chunk.js",
+    "static/js/2.a93c5699.chunk.js.map": "/a11y-tests/static/js/2.a93c5699.chunk.js.map",
+    "index.html": "/a11y-tests/index.html",
+    "precache-manifest.84ee9663e54837e588b928b682bbe1a7.js": "/a11y-tests/precache-manifest.84ee9663e54837e588b928b682bbe1a7.js",
+    "service-worker.js": "/a11y-tests/service-worker.js",
+    "static/media/acessibilidade.png": "/a11y-tests/static/media/acessibilidade.d6d91aa4.png",
+    "static/media/default.png": "/a11y-tests/static/media/default.5460d49f.png",
+    "static/media/logo-Ad-white.svg": "/a11y-tests/static/media/logo-Ad-white.27aa7520.svg",
+    "static/media/logo-Ad.svg": "/a11y-tests/static/media/logo-Ad.05916d79.svg",
+    "static/media/permanente.png": "/a11y-tests/static/media/permanente.70d96101.png",
+    "static/media/situacional.png": "/a11y-tests/static/media/situacional.d33e9429.png",
+    "static/media/temporaria.png": "/a11y-tests/static/media/temporaria.5c2378b3.png"
+  }
+}
