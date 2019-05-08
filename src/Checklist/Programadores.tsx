@@ -1,6 +1,5 @@
+import { Cell, Checkbox, Grid, Theme, useStyles, VFlow } from "bridge-react";
 import React from "react";
-
-import { Checkbox, VFlow, Grid, Cell, useStyles, Theme } from "bridge-react";
 
 function Programadores() {
   const { classes } = useStyles(createStyles);
