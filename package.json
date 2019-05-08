@@ -2,11 +2,14 @@
   "name": "a11y-tests",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://carolinekrone.github.io/a11y-tests",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -24,7 +27,7 @@
     ]
   },
   "dependencies": {
-    "@types/react-router": "^4.4.5",
+    "@types/react-router": "4.4.5",
     "bridge-react": "1.0.0-alpha.129",
     "emotion": "10.0.9",
     "final-form": "4.12.0",
@@ -32,7 +35,7 @@
     "react": "16.8.6",
     "react-dom": "16.8.6",
     "react-final-form": "4.1.0",
-    "react-router": "^5.0.0",
+    "react-router": "5.0.0",
     "react-router-dom": "5.0.0",
     "react-scripts": "3.0.0"
   },
@@ -40,6 +43,7 @@
     "@types/node": "11.13.7",
     "@types/react": "16.8.14",
     "@types/react-dom": "16.8.4",
+    "gh-pages": "2.0.1",
     "typescript": "3.4.5"
   }
 }
