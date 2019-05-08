@@ -36,10 +36,7 @@ function FormDemo() {
             <TextField label="Profissão" name="occupation" />
           </Cell>
           <Cell xs={6}>
-            <FieldWrapper
-              label="Frequência dos e-mails"
-              aria-label="Frequência dos e-mails"
-            >
+            <FieldWrapper label="Frequência dos e-mails">
               <HFlow>
                 <RadioField name="frequencia" value="Semanal" label="Semanal" />
                 <RadioField
@@ -62,6 +59,7 @@ function FormDemo() {
                 icon="infoCircleFilled"
                 fill={"secondary"}
                 style={{ marginLeft: "0.5rem" }}
+                tabIndex={0}
               />
             </Tooltip>
           </Cell>

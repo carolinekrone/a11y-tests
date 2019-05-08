@@ -26,7 +26,7 @@ function Home() {
         tabIndex={1}
         style={{ position: "absolute" }}
       >
-        Pule para o conteúdo principal
+        Pular para o conteúdo principal
       </a>
       <header className={classes.header}>
         <Grid direction="row" justifyContent="space-between">
@@ -49,17 +49,27 @@ function Home() {
           <Cell xs={2} lg={2} alignSelf="center">
             <DropdownButton
               aria-haspopup="true"
+              aria-label="Menu"
               type="button"
               size="small"
               kind="normal"
               items={[
-                { content: "Acessibilidade", onClick: console.log },
-                { content: "Tipos de deficiência", onClick: console.log },
+                {
+                  content: "Acessibilidade",
+                  onClick: () => {}
+                },
+                {
+                  content: "Tipos de deficiência",
+                  onClick: () => {
+                    window.location.replace("#definicao");
+                  }
+                },
                 { content: "Checklist de requisitos", onClick: console.log },
                 {
                   content: "Dados sobre acessibilidade",
                   onClick: console.log
                 },
+                { content: "Recursos", onClick: console.log },
                 { content: "Newsletter", onClick: console.log }
               ]}
             >
@@ -70,7 +80,7 @@ function Home() {
       </header>
       <VFlow>
         <div id="content" role="main">
-          <section className={classes.section} id="Acessibilidade">
+          <section className={classes.section} id="acessibilidade">
             <Grid wrap direction="row" gap={10}>
               <Cell xs={12} lg={6} alignSelf="center">
                 <div>
@@ -81,7 +91,7 @@ function Home() {
                     Nós criamos esse site para introduzir você no assunto da
                     acessibilidade digital. Aqui você vai entender mais sobre os
                     tipos de deficiência e sobre as responsabilidades de cada
-                    pessoa envolvida em um projeto digital. Ainda criamos uma
+                    pessoa envolvida em um projeto digital. Também criamos uma
                     sessão com recursos que são úteis para quem está começando
                     na área.
                   </p>
@@ -96,7 +106,7 @@ function Home() {
               </Cell>
             </Grid>
           </section>
-          <section className={classes.blueSection} id="Definicao">
+          <section className={classes.blueSection} id="definicao">
             <Grid direction="row">
               <Cell xs={12} lg={5} alignSelf="center">
                 <Heading level={2}>O que é acessiblidade?</Heading>
