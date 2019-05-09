@@ -1,33 +1,44 @@
-import React from "react";
-import { MemoryRouter, Switch, Route, Redirect } from "react-router";
-
-import { ButtonGroup, Text, Button } from "bridge-react";
-import Temporaria from "./Tipos/Temporaria";
+import { Button, ButtonGroup, Text } from "bridge-react";
+import React, { useState } from "react";
 import Permanente from "./Tipos/Permanente";
 import Situacional from "./Tipos/Situacional";
+import Temporaria from "./Tipos/Temporaria";
 
 function TiposSwitcher() {
+  const [active, setActive] = useState("Permanente");
+
   return (
     <>
-      <MemoryRouter initialEntries={["/Tipos/Permanente"]} initialIndex={1}>
-        <ButtonGroup>
-          <Button skin="default" kind="primary" size="small">
-            <Text>Permanente</Text>
-          </Button>
-          <Button skin="default" size="small">
-            <Text>Temporária</Text>
-          </Button>
-          <Button skin="default" size="small">
-            <Text>Situacional</Text>
-          </Button>
-        </ButtonGroup>
-        <Switch>
-          <Route path={`/Tipos/Temporaria`} component={Temporaria} />
-          <Route path={`/Tipos/Permanente`} component={Permanente} />
-          <Route path={`/Tipos/Situacional`} component={Situacional} />
-          <Redirect exact from={`/`} to={`/Tipos/Permanente`} />
-        </Switch>
-      </MemoryRouter>
+      <ButtonGroup>
+        <Button
+          skin="default"
+          size="small"
+          onClick={() => setActive("Permanente")}
+          kind={active === "Permanente" ? "primary" : "normal"}
+        >
+          <Text>Permanente</Text>
+        </Button>
+        <Button
+          skin="default"
+          size="small"
+          onClick={() => setActive("Temporaria")}
+          kind={active === "Temporaria" ? "primary" : "normal"}
+        >
+          <Text>Temporária</Text>
+        </Button>
+        <Button
+          skin="default"
+          size="small"
+          onClick={() => setActive("Situacional")}
+          kind={active === "Situacional" ? "primary" : "normal"}
+        >
+          <Text>Situacional</Text>
+        </Button>
+      </ButtonGroup>
+
+      {active === "Permanente" && <Permanente />}
+      {active === "Temporaria" && <Temporaria />}
+      {active === "Situacional" && <Situacional />}
     </>
   );
 }
