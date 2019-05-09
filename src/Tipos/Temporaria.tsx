@@ -1,6 +1,6 @@
+import { Heading, Theme, useStyles, VFlow } from "bridge-react";
 import React from "react";
-
-import { VFlow, Heading, useStyles, Theme } from "bridge-react";
+import image from "../static/image/temporaria.png";
 
 function Temporaria() {
   const { classes } = useStyles(createStyles);
@@ -17,7 +17,7 @@ function Temporaria() {
         </p>
         <img
           style={{ mixBlendMode: "multiply" }}
-          src={require("/Users/Carol/Documents/GitHub/a11y-tests/src/static/image/temporaria.png")}
+          src={image}
           alt="Desenho de quatro pessoas com exclusões temporarias. Da esquerda para direita: A primeira tem um braço quebrado e usa gesso; A segunda tem catarata e usa bengala; A terceira possui infecção no ouvido e a quarta possui laringite."
         />
       </div>

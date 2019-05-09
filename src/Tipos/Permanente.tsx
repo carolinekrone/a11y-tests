@@ -1,6 +1,6 @@
+import { Heading, Theme, useStyles, VFlow } from "bridge-react";
 import React from "react";
-
-import { VFlow, Heading, useStyles, Theme } from "bridge-react";
+import image from "../static/image/permanente.png";
 
 function Permanente() {
   const { classes } = useStyles(createStyles);
@@ -15,7 +15,7 @@ function Permanente() {
         </p>
         <img
           style={{ mixBlendMode: "multiply" }}
-          src={require("/Users/Carol/Documents/GitHub/a11y-tests/src/static/image/permanente.png")}
+          src={image}
           alt="Desenho de quatro pessoas com exclusões permanentes. Da esquerda para direita: A primeira só tem um braço; A segunda é cega e tem um cão guia ao seu lado; A terceira é surda e a quarta é muda."
         />
       </div>

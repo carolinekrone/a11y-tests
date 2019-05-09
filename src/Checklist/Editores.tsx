@@ -1,6 +1,5 @@
+import { Cell, Checkbox, Grid, Theme, useStyles, VFlow } from "bridge-react";
 import React from "react";
-
-import { Checkbox, VFlow, Grid, Cell, useStyles, Theme } from "bridge-react";
 
 function Editores() {
   const { classes } = useStyles(createStyles);
@@ -9,21 +8,30 @@ function Editores() {
     <VFlow>
       <Grid className={classes.graySection}>
         <Cell>
-          <Checkbox label="Seja o mais consistente e claro possível" />
+          <Checkbox
+            style={classes.checkbox}
+            label="Seja o mais consistente e claro possível"
+          />
           <p className={classes.pSmall}>
             Evite jargões e expressões idiomáticas. Use cabeçalhos para
             organizar o conteúdo.
           </p>
         </Cell>
         <Cell>
-          <Checkbox label="Escreva um bom texto alternativo para suas imagens" />
+          <Checkbox
+            style={classes.checkbox}
+            label="Escreva um bom texto alternativo para suas imagens"
+          />
           <p className={classes.pSmall}>
             Descreva todos os elementos que explicam o que está acontecendo na
             imagem, em vez de apenas definir o texto alternativo como "imagem".
           </p>
         </Cell>
         <Cell>
-          <Checkbox label="Links devem ser descritivos" />
+          <Checkbox
+            style={classes.checkbox}
+            label="Links devem ser descritivos"
+          />
           <p className={classes.pSmall}>
             A tecnologia assistiva é capaz de encontrar todos os links em uma
             página e apresentá-los de várias formas, mas esses links são inúteis
@@ -50,6 +58,9 @@ function createStyles(theme: Theme) {
       fontWeight: 400,
       fontSize: 14,
       margin: "1rem 20rem 1rem 3rem"
+    },
+    checkbox: {
+      fontSize: "0.875rem"
     }
   };
 }

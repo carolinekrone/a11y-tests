@@ -1,6 +1,6 @@
+import { Heading, Theme, useStyles, VFlow } from "bridge-react";
 import React from "react";
-
-import { VFlow, Heading, useStyles, Theme } from "bridge-react";
+import image from "../static/image/situacional.png";
 
 function Situacional() {
   const { classes } = useStyles(createStyles);
@@ -19,7 +19,7 @@ function Situacional() {
         </p>
         <img
           style={{ mixBlendMode: "multiply" }}
-          src={require("/Users/Carol/Documents/GitHub/a11y-tests/src/static/image/situacional.png")}
+          src={image}
           alt="Desenho de quatro pessoas com exclusões situacionais. Da esquerda para direita: A primeira tem um recém nascido no colo; A segunda é um motorista distraído; A terceira é um bartender em um ambiente barulhento e a quarta usa acessórios vikings e possui um sotaque pesado."
         />
       </div>
