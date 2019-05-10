@@ -1,4 +1,4 @@
-import { GlobalCss, ThemeProvider } from "bridge-react";
+import { GlobalCss, ThemeProvider } from "bold-ui";
 import React from "react";
 import Home from "./Home";
 

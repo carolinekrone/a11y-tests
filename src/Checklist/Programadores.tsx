@@ -1,4 +1,4 @@
-import { Cell, Checkbox, Grid, Theme, useStyles, VFlow } from "bridge-react";
+import { Cell, Checkbox, Grid, Theme, useStyles, VFlow } from "bold-ui";
 import React from "react";
 
 function Programadores() {

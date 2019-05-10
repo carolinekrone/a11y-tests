@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Checkbox, VFlow, useStyles, Theme, Grid, Cell } from "bridge-react";
+import { Checkbox, VFlow, useStyles, Theme, Grid, Cell } from "bold-ui";
 
 function QA() {
   const { classes } = useStyles(createStyles);

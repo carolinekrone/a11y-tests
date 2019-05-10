@@ -2176,6 +2176,25 @@ body-parser@1.18.3:
     raw-body "2.3.3"
     type-is "~1.6.16"
 
+bold-ui@1.0.0-alpha.132:
+  version "1.0.0-alpha.132"
+  resolved "https://repositorio.bridge.ufsc.br/repository/npm-group/bold-ui/-/bold-ui-1.0.0-alpha.132.tgz#94aacb13f6586021e2b20c9f17200db80127d65e"
+  integrity sha512-quZznPa39zSNX5FnGDAF2DAQehkDt1QcnVbA7PgGi7TKOC3cyNF1TXXp5k00w6VzvJ2j9TF8jeX/sQqt7/X3PQ==
+  dependencies:
+    "@emotion/core" "10.0.10"
+    downshift "3.2.8"
+    final-form-focus "1.1.2"
+    final-form-set-field-data "1.0.2"
+    focus-trap-react "6.0.0"
+    hoist-non-react-statics "3.3.0"
+    match-sorter "3.0.0"
+    react-dropzone "10.1.4"
+    react-popper "1.3.3"
+    react-text-mask "5.4.3"
+    react-transition-group "4.0.0"
+    text-mask-addons "3.8.0"
+    text-mask-core "5.1.2"
+
 bonjour@^3.5.0:
   version "3.5.0"
   resolved "https://repositorio.bridge.ufsc.br/repository/npm-group/bonjour/-/bonjour-3.5.0.tgz#8e890a183d8ee9a2393b3844c691a42bcf7bc9f5"
@@ -2216,25 +2235,6 @@ braces@^2.3.1, braces@^2.3.2:
     snapdragon-node "^2.0.1"
     split-string "^3.0.2"
     to-regex "^3.0.1"
-
-bridge-react@1.0.0-alpha.129:
-  version "1.0.0-alpha.129"
-  resolved "https://repositorio.bridge.ufsc.br/repository/npm-group/bridge-react/-/bridge-react-1.0.0-alpha.129.tgz#4dc6c8d23085374661001ad72804b450a0d0bbbe"
-  integrity sha512-/JLiTaYDNSxgq1nvgSceZgJhOzcR8otDsdsQCunvhfTeOA6gwHedAay1xsYHSiwJH317+bDpc/vkXukeU5KdIw==
-  dependencies:
-    "@emotion/core" "10.0.10"
-    downshift "3.2.8"
-    final-form-focus "1.1.2"
-    final-form-set-field-data "1.0.2"
-    focus-trap-react "6.0.0"
-    hoist-non-react-statics "3.3.0"
-    match-sorter "3.0.0"
-    react-dropzone "10.1.4"
-    react-popper "1.3.3"
-    react-text-mask "5.4.3"
-    react-transition-group "4.0.0"
-    text-mask-addons "3.8.0"
-    text-mask-core "5.1.2"
 
 brorand@^1.0.1:
   version "1.1.0"

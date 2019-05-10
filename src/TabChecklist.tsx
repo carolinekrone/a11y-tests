@@ -1,8 +1,8 @@
 import React from "react";
-import { useStyles, Theme } from "bridge-react";
+import { useStyles, Theme } from "bold-ui";
 import { MemoryRouter, Switch, Route, Redirect } from "react-router";
 
-import { TabLink, Tabs } from "bridge-react";
+import { TabLink, Tabs } from "bold-ui";
 import Designers from "./Checklist/Designers";
 import Programadores from "./Checklist/Programadores";
 import Editores from "./Checklist/Editores";

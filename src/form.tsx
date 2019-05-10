@@ -5,7 +5,7 @@ import {
   Button,
   Cell,
   CheckboxField,
-  FieldWrapper,
+  FormControl,
   Form,
   Grid,
   HFlow,
@@ -13,7 +13,7 @@ import {
   TextField,
   Tooltip,
   Icon
-} from "bridge-react";
+} from "bold-ui";
 
 function FormDemo() {
   const renderForm = (formProps: FormRenderProps) => {
@@ -36,7 +36,7 @@ function FormDemo() {
             <TextField label="Profissão" name="occupation" />
           </Cell>
           <Cell xs={6}>
-            <FieldWrapper label="Frequência dos e-mails">
+            <FormControl label="Frequência dos e-mails">
               <HFlow>
                 <RadioField name="frequencia" value="Semanal" label="Semanal" />
                 <RadioField
@@ -46,7 +46,7 @@ function FormDemo() {
                 />
                 <RadioField name="frequencia" value="Mensal" label="Mensal" />
               </HFlow>
-            </FieldWrapper>
+            </FormControl>
           </Cell>
           <Cell xs={12}>
             <CheckboxField

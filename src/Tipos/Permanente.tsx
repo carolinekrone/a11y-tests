@@ -1,4 +1,4 @@
-import { Heading, Theme, useStyles, VFlow } from "bridge-react";
+import { Heading, Theme, useStyles, VFlow } from "bold-ui";
 import React from "react";
 import image from "../static/image/permanente.png";
 

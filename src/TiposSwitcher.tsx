@@ -1,4 +1,4 @@
-import { Button, ButtonGroup, Text } from "bridge-react";
+import { Button, ButtonGroup, Text } from "bold-ui";
 import React, { useState } from "react";
 import Permanente from "./Tipos/Permanente";
 import Situacional from "./Tipos/Situacional";

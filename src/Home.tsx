@@ -1,18 +1,18 @@
-import React from "react";
-import FormDemo from "./form";
-import TabChecklist from "./TabChecklist";
-import TiposSwitcher from "./TiposSwitcher";
 import {
   Cell,
   Grid,
   Heading,
+  Icon,
   Link,
   Theme,
   useStyles,
-  VFlow,
-  DropdownButton,
-  Icon
-} from "bridge-react";
+  VFlow
+} from "bold-ui";
+import React from "react";
+import FormDemo from "./form";
+import { MenuDropdownButton } from "./MenuDropdownButton";
+import TabChecklist from "./TabChecklist";
+import TiposSwitcher from "./TiposSwitcher";
 
 function Home() {
   const { classes } = useStyles(createStyles);
@@ -36,34 +36,7 @@ function Home() {
             />
           </Cell>
           <Cell xs={2} lg={2} alignSelf="center">
-            <DropdownButton
-              aria-haspopup="true"
-              aria-label="Menu"
-              type="button"
-              size="small"
-              kind="normal"
-              items={[
-                {
-                  content: "Acessibilidade",
-                  onClick: () => {}
-                },
-                {
-                  content: "Tipos de deficiência",
-                  onClick: () => {
-                    window.location.replace("#definicao");
-                  }
-                },
-                { content: "Checklist de requisitos", onClick: console.log },
-                {
-                  content: "Dados sobre acessibilidade",
-                  onClick: console.log
-                },
-                { content: "Recursos", onClick: console.log },
-                { content: "Newsletter", onClick: console.log }
-              ]}
-            >
-              <Icon icon="hamburguerMenu" aria-label="Menu" />
-            </DropdownButton>
+            <MenuDropdownButton />
           </Cell>
         </Grid>
       </header>
@@ -153,7 +126,7 @@ function Home() {
               </Cell>
             </Grid>
           </section>
-          <section className={classes.section} id="Checklist">
+          <section className={classes.section} id="checklist">
             <VFlow>
               <Heading level={2}>Checklist para projetos acessíveis</Heading>
               <p className={classes.p}>
@@ -166,7 +139,7 @@ function Home() {
               <TabChecklist />
             </VFlow>
           </section>
-          <section className={classes.section} id="Dados">
+          <section className={classes.section} id="dados">
             <VFlow>
               <Heading level={2}>Dados sobre deficiência no Brasil</Heading>
               <Grid direction="row" alignItems="flex-start" wrap>
@@ -230,7 +203,7 @@ function Home() {
               </Grid>
             </VFlow>
           </section>
-          <section className={classes.section}>
+          <section className={classes.section} id="recursos">
             <VFlow>
               <Heading level={2}>Recursos</Heading>
               <p className={classes.p}>
@@ -300,7 +273,7 @@ function Home() {
             </VFlow>
           </section>
 
-          <section className={classes.newsletter} id="Newsletter">
+          <section className={classes.newsletter} id="newsletter">
             <div style={{ textAlign: "center" }}>
               <Heading level={2}>Se inscreva na nossa newsletter</Heading>
               <p className={classes.p}>
