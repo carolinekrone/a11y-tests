@@ -60,7 +60,7 @@ function createStyles(theme: Theme) {
       margin: "1rem 20rem 1rem 3rem"
     },
     checkbox: {
-      fontSize: "0.875rem"
+      fontSize: "1rem"
     }
   };
 }

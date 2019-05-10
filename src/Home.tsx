@@ -11,8 +11,7 @@ import {
   useStyles,
   VFlow,
   DropdownButton,
-  Icon,
-  TextInput
+  Icon
 } from "bridge-react";
 
 function Home() {
@@ -34,16 +33,6 @@ function Home() {
             <img
               src={require("./static/image/logo-Ad.svg")}
               alt="Logo Acessibilidade Digital"
-            />
-          </Cell>
-          <Cell xs={4} lg={4} alignSelf="center">
-            <TextInput
-              style={classes.searchInput}
-              type="search"
-              aria-label="Pesquisa"
-              icon="zoomOutline"
-              iconPosition="left"
-              placeholder="Buscar na página"
             />
           </Cell>
           <Cell xs={2} lg={2} alignSelf="center">
@@ -180,18 +169,20 @@ function Home() {
           <section className={classes.section} id="Dados">
             <VFlow>
               <Heading level={2}>Dados sobre deficiência no Brasil</Heading>
-
               <Grid direction="row" alignItems="flex-start" wrap>
-                <Cell lg={1} alignSelf="center">
-                  <Icon icon="mapFilled" fill="primary" size={3} />
-                </Cell>
-                <Cell lg={11}>
-                  {" "}
-                  <p className={classes.pBig}>
-                    <b>1 Bilhão</b> = 10% de pessoas em todo mundo convivem com
-                    alguma deficiência
-                  </p>
-                </Cell>
+                <div>
+                  <Cell lg={1} alignSelf="center">
+                    <Icon icon="mapFilled" fill="primary" size={3} />
+                  </Cell>
+                  <Cell lg={11}>
+                    {" "}
+                    <p className={classes.pBig}>
+                      <b>1 Bilhão</b> = 10% de pessoas em todo mundo convivem
+                      com alguma deficiência
+                    </p>
+                  </Cell>
+                </div>
+
                 <Cell lg={1} alignSelf="flex-start">
                   <Icon
                     icon="mapMarkerFilled"
@@ -439,7 +430,7 @@ function createStyles(theme: Theme) {
     pBig: {
       fontWeight: 400,
       fontSize: 20,
-      margin: "1rem 0 2rem"
+      margin: "1% 0 5%"
     },
     blockquote: {
       marginLeft: "7rem",

@@ -8,7 +8,10 @@ function Gestores() {
     <VFlow>
       <Grid className={classes.graySection}>
         <Cell>
-          <Checkbox label="Familiarize-se com o trabalho associado a tornar o conteúdo acessível" />
+          <Checkbox
+            style={classes.checkbox}
+            label="Familiarize-se com o trabalho associado a tornar o conteúdo acessível"
+          />
           <p className={classes.pSmall}>
             Temos diretrizes para design, engenharia e testes de controle de
             qualidade. Leia os requisitos e esteja ciente das verificações e
@@ -16,7 +19,10 @@ function Gestores() {
           </p>
         </Cell>
         <Cell>
-          <Checkbox label="Destine tempo para acessibilidade durante o planejamento do projeto e planejamento de sprints" />
+          <Checkbox
+            style={classes.checkbox}
+            label="Destine tempo para acessibilidade durante o planejamento do projeto e planejamento de sprints"
+          />
           <p className={classes.pSmall}>
             Acessibilidade não é um item de lista de verificação que só precisa
             ser considerado em alguns projetos ou no final de um processo. Essas
@@ -26,7 +32,10 @@ function Gestores() {
           </p>
         </Cell>
         <Cell>
-          <Checkbox label="Ao compartilhar um bom trabalho feito por sua equipe, elogie os esforços para aumentar a acessibilidade" />
+          <Checkbox
+            style={classes.checkbox}
+            label="Ao compartilhar um bom trabalho feito por sua equipe, elogie os esforços para aumentar a acessibilidade"
+          />
           <p className={classes.pSmall}>
             Todos gostamos de ouvir nosso trabalho reconhecido. Além de celebrar
             belos designs, códigos elegantes, retornos rápidos, experiências
@@ -37,7 +46,10 @@ function Gestores() {
           </p>
         </Cell>
         <Cell>
-          <Checkbox label="Seja um defensor da acessibilidade" />
+          <Checkbox
+            style={classes.checkbox}
+            label="Seja um defensor da acessibilidade"
+          />
           <p className={classes.pSmall}>
             Explique à sua equipe e às partes interessadas por que a
             acessibilidade é importante e deve ser uma prioridade em cada
@@ -62,6 +74,9 @@ function createStyles(theme: Theme) {
       fontWeight: 400,
       fontSize: 14,
       margin: "1rem 20rem 1rem 3rem"
+    },
+    checkbox: {
+      fontSize: "1rem"
     }
   };
 }

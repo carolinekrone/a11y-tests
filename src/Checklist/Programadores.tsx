@@ -8,7 +8,10 @@ function Programadores() {
     <VFlow>
       <Grid className={classes.graySection}>
         <Cell>
-          <Checkbox label="Use o elemento HTML correto para seu conteúdo" />
+          <Checkbox
+            style={classes.checkbox}
+            label="Use o elemento HTML correto para seu conteúdo"
+          />
           <p className={classes.pSmall}>
             Os elementos HTML comunicam ao navegador que tipo de conteúdo eles
             contêm e como o navegador deve processar ou tratar esse conteúdo. A
@@ -20,7 +23,10 @@ function Programadores() {
           </p>
         </Cell>
         <Cell>
-          <Checkbox label="Suporte navegação por teclado" />
+          <Checkbox
+            style={classes.checkbox}
+            label="Suporte navegação por teclado"
+          />
           <p className={classes.pSmall}>
             Navegadores suportam tabulação através de link, formulário,
             elementos de botão. Essa é uma maneira fácil de navegar pela página,
@@ -34,7 +40,10 @@ function Programadores() {
           </p>
         </Cell>
         <Cell>
-          <Checkbox label="Entenda e use marcos HTML" />
+          <Checkbox
+            style={classes.checkbox}
+            label="Entenda e use marcos HTML"
+          />
           <p className={classes.pSmall}>
             As pessoas que usam dispositivos auxiliares podem não querer
             examinar seu conteúdo linearmente, em vez disso, preferem usar uma
@@ -46,7 +55,10 @@ function Programadores() {
           </p>
         </Cell>
         <Cell>
-          <Checkbox label="Escreva um bom texto alternativo para suas imagens" />
+          <Checkbox
+            style={classes.checkbox}
+            label="Escreva um bom texto alternativo para suas imagens"
+          />
           <p className={classes.pSmall}>
             Descreva todos os elementos que explicam o que está acontecendo na
             imagem, em vez de apenas definir o texto alternativo como "imagem".
@@ -54,10 +66,6 @@ function Programadores() {
             descrever o design, se relevante, assim como todas as palavras da
             imagem.
           </p>
-        </Cell>
-        <Cell>
-          <Checkbox label="" />
-          <p className={classes.pSmall} />
         </Cell>
       </Grid>
     </VFlow>
@@ -76,6 +84,9 @@ function createStyles(theme: Theme) {
       fontWeight: 400,
       fontSize: 14,
       margin: "1rem 20rem 1rem 3rem"
+    },
+    checkbox: {
+      fontSize: "1rem"
     }
   };
 }
