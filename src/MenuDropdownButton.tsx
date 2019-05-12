@@ -25,7 +25,7 @@ export function MenuDropdownButton() {
         <DropdownItem component="a" href="#acessibilidade">
           Acessibilidade
         </DropdownItem>
-        <DropdownItem component="a" href="#definicao">
+        <DropdownItem component="a" href="#tipos">
           Tipos de deficiência
         </DropdownItem>
         <DropdownItem component="a" href="#checklist">

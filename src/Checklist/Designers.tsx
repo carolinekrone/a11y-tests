@@ -1,4 +1,4 @@
-import { Cell, Checkbox, Grid, Theme, useStyles, VFlow } from "bold-ui";
+import { Checkbox, Theme, useStyles, VFlow } from "bold-ui";
 import React from "react";
 
 function Designers() {
@@ -6,8 +6,8 @@ function Designers() {
 
   return (
     <VFlow>
-      <Grid className={classes.graySection}>
-        <Cell>
+      <ul className={classes.graySection} style={{ listStyle: "none" }}>
+        <li>
           <Checkbox
             style={classes.checkbox}
             label="Verifique se há contraste suficiente entre o texto e sua cor de fundo"
@@ -20,8 +20,8 @@ function Designers() {
             nem sempre refletem o tipo de tamanho visual). Tenha especial
             cuidado com o texto sobre as imagens.
           </p>
-        </Cell>
-        <Cell>
+        </li>
+        <li>
           <Checkbox
             style={classes.checkbox}
             label="Não utilize somente cor para transmitir informações importantes"
@@ -32,8 +32,8 @@ function Designers() {
             não conseguem diferenciar as cores facilmente consigam entender e
             usar seu conteúdo.
           </p>
-        </Cell>
-        <Cell>
+        </li>
+        <li>
           <Checkbox
             style={classes.checkbox}
             label="Projete estados de foco para ajudar os usuários a navegar e entender onde eles estão"
@@ -43,8 +43,8 @@ function Designers() {
             Quando as pessoas usam o teclado para navegar, seu produto deve
             incluir estados de foco altamente visíveis.
           </p>
-        </Cell>
-        <Cell>
+        </li>
+        <li>
           <Checkbox
             style={classes.checkbox}
             label="Escreva um bom texto alternativo para suas imagens"
@@ -53,8 +53,8 @@ function Designers() {
             Descreva todos os elementos que explicam o que está acontecendo na
             imagem, em vez de apenas definir o texto alternativo como "imagem".
           </p>
-        </Cell>
-      </Grid>
+        </li>
+      </ul>
     </VFlow>
   );
 }
@@ -64,13 +64,15 @@ export default Designers;
 function createStyles(theme: Theme) {
   return {
     graySection: {
-      margin: "1rem 0",
+      alignContent: "center",
+      padding: "2% 2%",
       backgroundColor: theme.pallete.gray.c90
     },
     pSmall: {
       fontWeight: 400,
       fontSize: 14,
-      margin: "1rem 20rem 1rem 3rem"
+      maxWidth: "600px",
+      margin: "0.5rem 2rem 2rem"
     },
     checkbox: {
       fontSize: "1rem"

@@ -79,9 +79,15 @@ function FormDemo() {
   };
 
   return (
-    <Form render={renderForm} onSubmit={console.log} validate={validate} />
+    <>
+      <Form render={renderForm} validate={validate} onSubmit={onSubmit} />
+    </>
   );
 }
+
+const onSubmit = () => {
+  return alert("Inscrição confirmada");
+};
 
 const validate = (values: any) => {
   const errors: any = {};
@@ -92,10 +98,10 @@ const validate = (values: any) => {
 
   if (!values.email) {
     errors.email = "E-mail é obrigatório";
-  }
-  if (values.email !== /^[a-zA-Z0-9]+@+[a-zA-Z0-9]+.+[A-z]/) {
+  } else if (values.email !== /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/) {
     errors.email = "Este endereço de e-mail não é válido";
   }
+
   return errors;
 };
 

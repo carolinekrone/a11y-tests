@@ -1,8 +1,6 @@
 import React from "react";
-import { useStyles, Theme } from "bold-ui";
+import { useStyles, Theme, TabLink, Tabs } from "bold-ui";
 import { MemoryRouter, Switch, Route, Redirect } from "react-router";
-
-import { TabLink, Tabs } from "bold-ui";
 import Designers from "./Checklist/Designers";
 import Programadores from "./Checklist/Programadores";
 import Editores from "./Checklist/Editores";

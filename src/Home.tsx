@@ -9,7 +9,7 @@ import {
   VFlow
 } from "bold-ui";
 import React from "react";
-import FormDemo from "./form";
+import FormDemo from "./Form";
 import { MenuDropdownButton } from "./MenuDropdownButton";
 import TabChecklist from "./TabChecklist";
 import TiposSwitcher from "./TiposSwitcher";
@@ -95,7 +95,7 @@ function Home() {
               </Cell>
               <Cell xs={12} sm={6} lg={7}>
                 <img
-                  style={{ width: 526, height: 285, marginLeft: "7rem" }}
+                  style={{ maxWidth: 526, maxHeight: 285, marginLeft: "7rem" }}
                   src={require("./static/image/acessibilidade.png")}
                   alt="Ilustração de uma pessoa cega atravessando uma faixa de pedestre com o auxílio de uma bengala."
                 />
@@ -105,23 +105,23 @@ function Home() {
           <section
             className={classes.section}
             style={{ textAlign: "center" }}
-            id="Tipos"
+            id="tipos"
           >
             <Grid direction="column" gapVertical={2} alignItems="center">
               <Cell xs={12} lg={6}>
                 <Heading level={2}>Tipos de deficiência</Heading>
               </Cell>
-              <Cell xs={8}>
+              <Cell xs={8} sm={8} lg={6}>
                 <div>
                   <p className={classes.p}>
-                    A deficiência é dependente do contexto e, a exclusão física,
+                    A deficiência é dependente do contexto e a exclusão física,
                     cognitiva e social é o resultado de interações
                     incompatíveis. E pode ser classificada em três grupos:
                     Permanente, temporária e situacional.
                   </p>
                 </div>
               </Cell>
-              <Cell>
+              <Cell lg={8} xs={12} sm={12}>
                 <TiposSwitcher />
               </Cell>
             </Grid>
@@ -141,57 +141,50 @@ function Home() {
           </section>
           <section className={classes.section} id="dados">
             <Heading level={2}>Dados sobre deficiência no Brasil</Heading>
-
-            <Grid direction="row" wrap>
-              <Cell lg={1} flexGrow={1}>
+            <ul className={classes.ul}>
+              <li className={classes.li}>
                 <Icon icon="mapFilled" fill="primary" size={3} />
-              </Cell>
-              <Cell lg={11} flexGrow={2}>
-                <p className={classes.pBig}>
-                  <b>1 Bilhão</b> = 10% de pessoas em todo mundo convivem com
-                  alguma deficiência
-                </p>
-              </Cell>
-              <Cell lg={1} alignSelf="flex-start" flexGrow={1}>
+                <span className={classes.pBig} style={{ paddingLeft: "2%" }}>
+                  1 Bilhão = 10% de pessoas em todo mundo convivem com alguma
+                  deficiência
+                </span>
+              </li>
+              <li className={classes.li}>
                 <Icon icon="mapMarkerFilled" fill="primary" size={3} />
-              </Cell>
-              <Cell lg={11} flexGrow={2}>
-                <p className={classes.pBig}>
-                  No Brasil, <b>45,6 milhões de pessoas</b> (23,9%) têm algum
-                  tipo de deficiência. Sendo:
-                </p>
-                <p className={classes.p}>
-                  <b>18,6%</b> deficiência visual
-                </p>
-                <p className={classes.p}>
-                  <b>7%</b> deficiência motora
-                </p>
-                <p className={classes.p}>
-                  <b>5,10%</b> deficiência auditiva
-                </p>
-                <p className={classes.p}>
-                  <b>7% </b>deficiência mental ou intelectual
-                </p>
-              </Cell>
-              <Cell lg={1} alignSelf="flex-start">
+                <span className={classes.pBig} style={{ paddingLeft: "2%" }}>
+                  No Brasil, 45,6 milhões de pessoas (23,9%) têm algum tipo de
+                  deficiência. Sendo:
+                </span>
+                <div style={{ paddingLeft: "6%" }}>
+                  <p className={classes.p}>
+                    <b>18,6%</b> deficiência visual
+                  </p>
+                  <p className={classes.p}>
+                    <b>7%</b> deficiência motora
+                  </p>
+                  <p className={classes.p}>
+                    <b>5,10%</b> deficiência auditiva
+                  </p>
+                  <p className={classes.p}>
+                    <b>7% </b>deficiência mental ou intelectual
+                  </p>
+                </div>
+              </li>
+              <li className={classes.li}>
                 <Icon icon="desktopFilled" fill="primary" size={3} />
-              </Cell>
-              <Cell lg={11}>
-                <p className={classes.pBig}>
+                <span className={classes.pBig} style={{ paddingLeft: "2%" }}>
                   <b>97,8% </b>das páginas tiveram falhas detectadas na WCAG 2,
                   com uma média de <b>59,6</b> erros por página.
-                </p>
-              </Cell>
-              <Cell lg={1}>
+                </span>
+              </li>
+              <li className={classes.li}>
                 <Icon icon="chatFilled" fill="primary" size={3} />
-              </Cell>
-              <Cell>
-                <p className={classes.pBig}>
+                <span className={classes.pBig} style={{ paddingLeft: "2%" }}>
                   De 2009 a 2017 o uso de leitor de tela{" "}
                   <b>aumentou de 12% para 88%.</b>
-                </p>
-              </Cell>
-            </Grid>
+                </span>
+              </li>
+            </ul>
           </section>
 
           <section className={classes.section} id="recursos">
@@ -211,23 +204,39 @@ function Home() {
                   <Heading level={3}>Sites</Heading>
                 </Cell>
               </Grid>
-              <p className={classes.p}>
-                Web Content Accessibility Guidelines (WCAG) 2.0 -{" "}
-                <Link href="https://www.w3.org/TR/WCAG20/">W3C</Link>
-              </p>
-
-              <p className={classes.p}>
-                Web Accessibility in Mind -{" "}
-                <Link href="https://webaim.org/">Webaim</Link>
-              </p>
-              <p className={classes.p}>
-                Movimento Web para todos -{" "}
-                <Link href="http://mwpt.com.br/">MWPT</Link>
-              </p>
-              <p className={classes.p}>
-                Todos por acessibilidade -{" "}
-                <Link href="http://acessibilida.de/">Acessibilida.de</Link>
-              </p>
+              <ul>
+                <li className={classes.p} lang="en">
+                  {" "}
+                  Web Content Accessibility Guidelines (WCAG) 2.0 -{" "}
+                  <Link
+                    href="https://www.w3.org/TR/WCAG20/"
+                    style={{ fontSize: "1rem" }}
+                  >
+                    W3C
+                  </Link>
+                </li>
+                <li className={classes.p} lang="en">
+                  Web Accessibility in Mind -{" "}
+                  <Link href="https://webaim.org/" style={{ fontSize: "1rem" }}>
+                    Webaim
+                  </Link>
+                </li>
+                <li className={classes.p}>
+                  Movimento Web para todos -{" "}
+                  <Link href="http://mwpt.com.br/" style={{ fontSize: "1rem" }}>
+                    MWPT
+                  </Link>
+                </li>
+                <li className={classes.p}>
+                  Todos por acessibilidade -{" "}
+                  <Link
+                    href="http://acessibilida.de/"
+                    style={{ fontSize: "1rem" }}
+                  >
+                    Acessibilida.de
+                  </Link>
+                </li>
+              </ul>
               <br />
               <Grid direction="row" alignItems="center">
                 <Cell /> <Icon icon="rocket" fill="primary" />
@@ -235,13 +244,18 @@ function Home() {
                   <Heading level={3}>Cursos</Heading>
                 </Cell>
               </Grid>
-              <p className={classes.p}>
-                Web Accessibility: Developing with Empathy -{" "}
-                <Link href="https://www.udacity.com/course/web-accessibility--ud891">
-                  Udacity
-                </Link>
-              </p>
-              <br />
+              <ul>
+                <li className={classes.p} lang="en">
+                  Web Accessibility: Developing with Empathy -{" "}
+                  <Link
+                    href="https://www.udacity.com/course/web-accessibility--ud891"
+                    style={{ fontSize: "1rem" }}
+                  >
+                    Udacity
+                  </Link>
+                </li>
+                <br />
+              </ul>
 
               <Grid direction="row" alignItems="center">
                 <Cell /> <Icon icon="gearFilled" fill="primary" />
@@ -249,18 +263,26 @@ function Home() {
                   <Heading level={3}>Ferramentas</Heading>
                 </Cell>
               </Grid>
-              <p className={classes.p}>
-                The Persona Spectrum -{" "}
-                <Link href="https://www.microsoft.com/design/">
-                  Microsoft Design
-                </Link>
-              </p>
-              <p className={classes.p}>
-                Color Contrast Checker -
-                <Link href="https://webaim.org/resources/contrastchecker/">
-                  Webaim
-                </Link>
-              </p>
+              <ul>
+                <li className={classes.p} lang="en">
+                  The Persona Spectrum -{" "}
+                  <Link
+                    href="https://www.microsoft.com/design/"
+                    style={{ fontSize: "1rem" }}
+                  >
+                    Microsoft Design
+                  </Link>
+                </li>
+                <li className={classes.p}>
+                  Verificador de Contraste de Cor -
+                  <Link
+                    href="https://webaim.org/resources/contrastchecker/"
+                    style={{ fontSize: "1rem" }}
+                  >
+                    Webaim
+                  </Link>
+                </li>
+              </ul>
             </VFlow>
           </section>
 
@@ -353,19 +375,6 @@ function createStyles(theme: Theme) {
       backgroundColor: theme.pallete.gray.c100,
       boxShadow: theme.shadows.outer[40]
     },
-    search: {
-      flex: 1,
-      padding: "0 1rem"
-    },
-    searchInput: {
-      border: "none",
-      "~ span": {
-        background: theme.pallete.surface.main
-      },
-      "&::-webkit-search-decoration": {
-        WebkitAppearance: "none"
-      }
-    },
     section: {
       margin: "5% 8%"
     },
@@ -395,6 +404,14 @@ function createStyles(theme: Theme) {
       fontWeight: 400,
       fontSize: 20,
       margin: "1% 0 5%"
+    },
+    ul: {
+      listStyle: "none",
+      margin: "1%"
+    },
+    li: {
+      verticalAlign: "middle",
+      paddingTop: "2rem"
     },
     blockquote: {
       marginLeft: "7rem",

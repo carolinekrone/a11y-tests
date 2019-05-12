@@ -1,4 +1,4 @@
-import { Cell, Checkbox, Grid, Theme, useStyles, VFlow } from "bold-ui";
+import { Checkbox, Theme, useStyles, VFlow } from "bold-ui";
 import React from "react";
 
 function Editores() {
@@ -6,8 +6,8 @@ function Editores() {
 
   return (
     <VFlow>
-      <Grid className={classes.graySection}>
-        <Cell>
+      <ul className={classes.graySection} style={{ listStyle: "none" }}>
+        <li>
           <Checkbox
             style={classes.checkbox}
             label="Seja o mais consistente e claro possível"
@@ -16,8 +16,8 @@ function Editores() {
             Evite jargões e expressões idiomáticas. Use cabeçalhos para
             organizar o conteúdo.
           </p>
-        </Cell>
-        <Cell>
+        </li>
+        <li>
           <Checkbox
             style={classes.checkbox}
             label="Escreva um bom texto alternativo para suas imagens"
@@ -26,8 +26,8 @@ function Editores() {
             Descreva todos os elementos que explicam o que está acontecendo na
             imagem, em vez de apenas definir o texto alternativo como "imagem".
           </p>
-        </Cell>
-        <Cell>
+        </li>
+        <li>
           <Checkbox
             style={classes.checkbox}
             label="Links devem ser descritivos"
@@ -40,8 +40,8 @@ function Editores() {
             o usuário irá se clicar nele, dando uma ideia do que está do outro
             lado do clique.
           </p>
-        </Cell>
-      </Grid>
+        </li>
+      </ul>
     </VFlow>
   );
 }
@@ -51,13 +51,15 @@ export default Editores;
 function createStyles(theme: Theme) {
   return {
     graySection: {
-      margin: "1rem 0",
+      alignContent: "center",
+      padding: "2% 2%",
       backgroundColor: theme.pallete.gray.c90
     },
     pSmall: {
       fontWeight: 400,
       fontSize: 14,
-      margin: "1rem 20rem 1rem 3rem"
+      maxWidth: "600px",
+      margin: "0.5rem 2rem 2rem"
     },
     checkbox: {
       fontSize: "1rem"

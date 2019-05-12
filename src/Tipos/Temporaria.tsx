@@ -30,14 +30,15 @@ export default Temporaria;
 function createStyles(theme: Theme) {
   return {
     graySection: {
-      margin: "1rem ",
+      margin: "1rem",
       padding: "1rem ",
       backgroundColor: theme.pallete.gray.c90
     },
     pSmall: {
       fontWeight: 400,
       fontSize: 14,
-      margin: "1rem 20rem 3rem 20rem"
+      maxWidth: "400px",
+      margin: "1rem auto 3rem"
     }
   };
 }

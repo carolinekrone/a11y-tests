@@ -1,4 +1,4 @@
-import { Cell, Checkbox, Grid, Theme, useStyles, VFlow } from "bold-ui";
+import { Checkbox, Theme, useStyles, VFlow } from "bold-ui";
 import React from "react";
 
 function Programadores() {
@@ -6,8 +6,8 @@ function Programadores() {
 
   return (
     <VFlow>
-      <Grid className={classes.graySection}>
-        <Cell>
+      <ul className={classes.graySection} style={{ listStyle: "none" }}>
+        <li>
           <Checkbox
             style={classes.checkbox}
             label="Use o elemento HTML correto para seu conteúdo"
@@ -21,8 +21,8 @@ function Programadores() {
             contexto atual é uma maneira simples de criar uma boa base para suas
             experiências.
           </p>
-        </Cell>
-        <Cell>
+        </li>
+        <li>
           <Checkbox
             style={classes.checkbox}
             label="Suporte navegação por teclado"
@@ -38,8 +38,8 @@ function Programadores() {
             interface com guias), mas não removendo-os do fluxo da guia (para
             que os elementos de formulário ocultos possam ser focalizados).
           </p>
-        </Cell>
-        <Cell>
+        </li>
+        <li>
           <Checkbox
             style={classes.checkbox}
             label="Entenda e use marcos HTML"
@@ -53,8 +53,8 @@ function Programadores() {
             definir áreas específicas que um usuário pode querer procurar e pode
             economizar muito tempo.
           </p>
-        </Cell>
-        <Cell>
+        </li>
+        <li>
           <Checkbox
             style={classes.checkbox}
             label="Escreva um bom texto alternativo para suas imagens"
@@ -66,8 +66,8 @@ function Programadores() {
             descrever o design, se relevante, assim como todas as palavras da
             imagem.
           </p>
-        </Cell>
-      </Grid>
+        </li>
+      </ul>
     </VFlow>
   );
 }
@@ -77,13 +77,15 @@ export default Programadores;
 function createStyles(theme: Theme) {
   return {
     graySection: {
-      margin: "1rem 0",
+      alignContent: "center",
+      padding: "2% 2%",
       backgroundColor: theme.pallete.gray.c90
     },
     pSmall: {
       fontWeight: 400,
       fontSize: 14,
-      margin: "1rem 20rem 1rem 3rem"
+      maxWidth: "600px",
+      margin: "0.5rem 2rem 2rem"
     },
     checkbox: {
       fontSize: "1rem"

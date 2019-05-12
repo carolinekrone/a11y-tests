@@ -1,4 +1,4 @@
-import { Cell, Checkbox, Grid, Theme, useStyles, VFlow } from "bold-ui";
+import { Checkbox, Theme, useStyles, VFlow } from "bold-ui";
 import React from "react";
 
 function Gestores() {
@@ -6,8 +6,8 @@ function Gestores() {
 
   return (
     <VFlow>
-      <Grid className={classes.graySection}>
-        <Cell>
+      <ul className={classes.graySection} style={{ listStyle: "none" }}>
+        <li>
           <Checkbox
             style={classes.checkbox}
             label="Familiarize-se com o trabalho associado a tornar o conteúdo acessível"
@@ -17,8 +17,8 @@ function Gestores() {
             qualidade. Leia os requisitos e esteja ciente das verificações e
             padrões que a QA estará procurando em seus produtos.
           </p>
-        </Cell>
-        <Cell>
+        </li>
+        <li>
           <Checkbox
             style={classes.checkbox}
             label="Destine tempo para acessibilidade durante o planejamento do projeto e planejamento de sprints"
@@ -30,8 +30,8 @@ function Gestores() {
             em uma equipe. Certifique-se de que você é responsável por isso
             durante o planejamento de projetos e sprints.
           </p>
-        </Cell>
-        <Cell>
+        </li>
+        <li>
           <Checkbox
             style={classes.checkbox}
             label="Ao compartilhar um bom trabalho feito por sua equipe, elogie os esforços para aumentar a acessibilidade"
@@ -44,8 +44,8 @@ function Gestores() {
             um sistema de navegação de teclado inteligente ou cópia e hierarquia
             claras.
           </p>
-        </Cell>
-        <Cell>
+        </li>
+        <li>
           <Checkbox
             style={classes.checkbox}
             label="Seja um defensor da acessibilidade"
@@ -56,8 +56,8 @@ function Gestores() {
             trabalho que sua equipe assume. Isso torna nossos produtos - e
             nossas equipes - melhores.
           </p>
-        </Cell>
-      </Grid>
+        </li>
+      </ul>
     </VFlow>
   );
 }
@@ -67,13 +67,15 @@ export default Gestores;
 function createStyles(theme: Theme) {
   return {
     graySection: {
-      margin: "1rem 0",
+      alignContent: "center",
+      padding: "2% 2%",
       backgroundColor: theme.pallete.gray.c90
     },
     pSmall: {
       fontWeight: 400,
       fontSize: 14,
-      margin: "1rem 20rem 1rem 3rem"
+      maxWidth: "600px",
+      margin: "0.5rem 2rem 2rem"
     },
     checkbox: {
       fontSize: "1rem"
