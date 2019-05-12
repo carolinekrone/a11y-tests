@@ -22,7 +22,6 @@ function Home() {
       <a
         href="#content"
         className={classes.skiplink}
-        tabIndex={1}
         style={{ position: "absolute" }}
       >
         Pular para o conteúdo principal
@@ -254,8 +253,8 @@ function Home() {
                     Udacity
                   </Link>
                 </li>
-                <br />
               </ul>
+              <br />
 
               <Grid direction="row" alignItems="center">
                 <Cell /> <Icon icon="gearFilled" fill="primary" />
@@ -406,8 +405,7 @@ function createStyles(theme: Theme) {
       margin: "1% 0 5%"
     },
     ul: {
-      listStyle: "none",
-      margin: "1%"
+      listStyle: "none"
     },
     li: {
       verticalAlign: "middle",
