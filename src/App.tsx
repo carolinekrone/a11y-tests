@@ -2,8 +2,6 @@ import { GlobalCss, ThemeProvider } from "bold-ui";
 import React from "react";
 import Home from "./Home";
 
-//import { MemoryRouter } from "react";
-
 function App() {
   const globalStyles = {
     h1: {

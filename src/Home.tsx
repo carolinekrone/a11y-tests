@@ -61,7 +61,7 @@ function Home() {
               </Cell>
               <Cell xs={12} lg={6}>
                 <img
-                  style={{ width: 526, height: 323 }}
+                  style={{ maxWidth: 526, maxHeight: 323 }}
                   src={require("./static/image/default.png")}
                   alt="Ilustração de duas pessoas. Uma está sentada no canto esquerdo da imagem segurando um tablet e a outra é cadeirante e está no canto esquerdo da imagem interagindo com um painel que contém circulos. "
                 />
@@ -69,7 +69,7 @@ function Home() {
             </Grid>
           </section>
           <section className={classes.blueSection} id="definicao">
-            <Grid direction="row">
+            <Grid direction="row" wrap>
               <Cell xs={12} lg={5} alignSelf="center">
                 <Heading level={2}>O que é acessiblidade?</Heading>
                 <blockquote
@@ -140,69 +140,60 @@ function Home() {
             </VFlow>
           </section>
           <section className={classes.section} id="dados">
-            <VFlow>
-              <Heading level={2}>Dados sobre deficiência no Brasil</Heading>
-              <Grid direction="row" alignItems="flex-start" wrap>
-                <div>
-                  <Cell lg={1} alignSelf="center">
-                    <Icon icon="mapFilled" fill="primary" size={3} />
-                  </Cell>
-                  <Cell lg={11}>
-                    {" "}
-                    <p className={classes.pBig}>
-                      <b>1 Bilhão</b> = 10% de pessoas em todo mundo convivem
-                      com alguma deficiência
-                    </p>
-                  </Cell>
-                </div>
+            <Heading level={2}>Dados sobre deficiência no Brasil</Heading>
 
-                <Cell lg={1} alignSelf="flex-start">
-                  <Icon
-                    icon="mapMarkerFilled"
-                    fill="primary"
-                    size={3}
-                    aria-label=""
-                  />
-                </Cell>
-                <Cell lg={11}>
-                  <p className={classes.pBig}>
-                    No Brasil, <b>45,6 milhões de pessoas</b> (23,9%) têm algum
-                    tipo de deficiência. Sendo:
-                  </p>
-                  <p className={classes.p}>
-                    <b>18,6%</b> deficiência visual
-                  </p>
-                  <p className={classes.p}>
-                    <b>7%</b> deficiência motora
-                  </p>
-                  <p className={classes.p}>
-                    <b>5,10%</b> deficiência auditiva
-                  </p>
-                  <p className={classes.p}>
-                    <b>7% </b>deficiência mental ou intelectual
-                  </p>
-                </Cell>
-                <Cell lg={1} alignSelf="center">
-                  <Icon icon="desktopFilled" fill="primary" size={3} />
-                </Cell>
-                <Cell lg={11}>
-                  <p className={classes.pBig}>
-                    <b>97,8% </b>das páginas tiveram falhas detectadas na WCAG
-                    2, com uma média de <b>59,6</b> erros por página.
-                  </p>
-                </Cell>
-                <Cell lg={1}>
-                  <Icon icon="chatFilled" fill="primary" size={3} />
-                </Cell>
-                <Cell lg={11}>
-                  <p className={classes.pBig}>
-                    De 2009 a 2017 o uso de leitor de tela{" "}
-                    <b>aumentou de 12% para 88%.</b>
-                  </p>
-                </Cell>
-              </Grid>
-            </VFlow>
+            <Grid direction="row" wrap>
+              <Cell lg={1} flexGrow={1}>
+                <Icon icon="mapFilled" fill="primary" size={3} />
+              </Cell>
+              <Cell lg={11} flexGrow={2}>
+                <p className={classes.pBig}>
+                  <b>1 Bilhão</b> = 10% de pessoas em todo mundo convivem com
+                  alguma deficiência
+                </p>
+              </Cell>
+              <Cell lg={1} alignSelf="flex-start" flexGrow={1}>
+                <Icon icon="mapMarkerFilled" fill="primary" size={3} />
+              </Cell>
+              <Cell lg={11} flexGrow={2}>
+                <p className={classes.pBig}>
+                  No Brasil, <b>45,6 milhões de pessoas</b> (23,9%) têm algum
+                  tipo de deficiência. Sendo:
+                </p>
+                <p className={classes.p}>
+                  <b>18,6%</b> deficiência visual
+                </p>
+                <p className={classes.p}>
+                  <b>7%</b> deficiência motora
+                </p>
+                <p className={classes.p}>
+                  <b>5,10%</b> deficiência auditiva
+                </p>
+                <p className={classes.p}>
+                  <b>7% </b>deficiência mental ou intelectual
+                </p>
+              </Cell>
+              <Cell lg={1} alignSelf="flex-start">
+                <Icon icon="desktopFilled" fill="primary" size={3} />
+              </Cell>
+              <Cell lg={11}>
+                <p className={classes.pBig}>
+                  <b>97,8% </b>das páginas tiveram falhas detectadas na WCAG 2,
+                  com uma média de <b>59,6</b> erros por página.
+                </p>
+              </Cell>
+              <Cell lg={1}>
+                <Icon icon="chatFilled" fill="primary" size={3} />
+              </Cell>
+              <Cell>
+                <p className={classes.pBig}>
+                  De 2009 a 2017 o uso de leitor de tela{" "}
+                  <b>aumentou de 12% para 88%.</b>
+                </p>
+              </Cell>
+            </Grid>
           </section>
+
           <section className={classes.section} id="recursos">
             <VFlow>
               <Heading level={2}>Recursos</Heading>
@@ -278,7 +269,8 @@ function Home() {
               <Heading level={2}>Se inscreva na nossa newsletter</Heading>
               <p className={classes.p}>
                 Receba notícias sobre o que há de mais novo em acessibilidade
-                digital. Prometemos enviar somente o necessário, nada de spams!
+                digital. <br /> Prometemos enviar somente o necessário, nada de
+                spams!
               </p>
             </div>
             <div className={classes.card}>
@@ -300,7 +292,7 @@ function Home() {
           <Cell xs={12} lg={6} alignSelf="center">
             <p className={classes.pSmall}>
               O site Acessibilidade Digital é um Projeto de Conclusão em Design
-              da Universidade Federal de Santa Catarina, produzido por
+              da Universidade Federal de Santa Catarina, produzido por{" "}
               <Link
                 href="https://twitter.com/carolinekrone"
                 style={{ color: "white" }}
@@ -343,7 +335,6 @@ function createStyles(theme: Theme) {
     skiplink: {
       clip: "rect(1px,1px,1px,1px)",
       overflow: "hidden",
-      //position: "absolute",
       padding: "1rem !important",
       "&: focus": {
         height: "auto",
@@ -413,7 +404,7 @@ function createStyles(theme: Theme) {
       "&::before": {
         display: "inline-block",
         content: "",
-        position: "absolute",
+        // position: "absolute",
         margin: "0.875rem",
         left: "-1rem",
         width: "80px",
@@ -422,9 +413,9 @@ function createStyles(theme: Theme) {
       }
     },
     newsletter: {
-      justifyContent: "center",
+      alignItems: "center",
       backgroundColor: theme.pallete.primary.c10,
-      padding: "4% 10%",
+      padding: "4%",
       color: theme.pallete.gray.c100
     },
     card: {
@@ -432,8 +423,8 @@ function createStyles(theme: Theme) {
       backgroundColor: theme.pallete.gray.c100,
       boxShadow: theme.shadows.outer[160],
       borderRadius: 4,
-      margin: "0 30%",
-      marginTop: "2rem",
+      maxWidth: "500px",
+      margin: "2rem auto",
       padding: "2rem"
     },
     block: {
