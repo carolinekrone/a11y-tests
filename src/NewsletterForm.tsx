@@ -15,7 +15,7 @@ import {
   Icon
 } from "bold-ui";
 
-function FormDemo() {
+function NewsletterForm() {
   const renderForm = (formProps: FormRenderProps) => {
     return (
       <form onSubmit={formProps.handleSubmit}>
@@ -78,11 +78,7 @@ function FormDemo() {
     );
   };
 
-  return (
-    <>
-      <Form render={renderForm} validate={validate} onSubmit={onSubmit} />
-    </>
-  );
+  return <Form render={renderForm} validate={validate} onSubmit={onSubmit} />;
 }
 
 const onSubmit = () => {
@@ -105,4 +101,4 @@ const validate = (values: any) => {
   return errors;
 };
 
-export default FormDemo;
+export default NewsletterForm;

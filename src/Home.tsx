@@ -9,7 +9,7 @@ import {
   VFlow
 } from "bold-ui";
 import React from "react";
-import FormDemo from "./Form";
+import NewsletterForm from "./NewsletterForm";
 import { MenuDropdownButton } from "./MenuDropdownButton";
 import TabChecklist from "./TabChecklist";
 import TiposSwitcher from "./TiposSwitcher";
@@ -296,7 +296,7 @@ function Home() {
             </div>
             <div className={classes.card}>
               {" "}
-              <FormDemo />
+              <NewsletterForm />
             </div>
           </section>
         </div>
