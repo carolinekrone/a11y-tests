@@ -30,7 +30,7 @@ function Home() {
         <Grid direction="row" justifyContent="space-between">
           <Cell xs={6} lg={6} alignSelf="center">
             <img
-              src={require("./static/image/logo-Ad.svg")}
+              src={require("./static/image/logo.svg")}
               alt="Logo Acessibilidade Digital"
             />
           </Cell>
@@ -305,7 +305,7 @@ function Home() {
         <Grid direction="row" wrap>
           <Cell xs={12} lg={6}>
             <img
-              src={require("./static/image/logo-Ad-white.svg")}
+              src={require("./static/image/logo-white.svg")}
               alt="Logo Acessibilidade Digital"
             />
             <p>Versão 1.0</p>
