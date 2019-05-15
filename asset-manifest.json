@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.js": "/static/js/main.996b0d90.chunk.js",
-    "main.js.map": "/static/js/main.996b0d90.chunk.js.map",
-    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
-    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-    "static/js/2.a047aaeb.chunk.js": "/static/js/2.a047aaeb.chunk.js",
-    "static/js/2.a047aaeb.chunk.js.map": "/static/js/2.a047aaeb.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.833b5fd7f88b9116fae1bd921a86118c.js": "/precache-manifest.833b5fd7f88b9116fae1bd921a86118c.js",
-    "service-worker.js": "/service-worker.js",
-    "static/media/acessibilidade.png": "/static/media/acessibilidade.d6d91aa4.png",
-    "static/media/default.png": "/static/media/default.5460d49f.png",
-    "static/media/logo-white.svg": "/static/media/logo-white.27aa7520.svg",
-    "static/media/logo.svg": "/static/media/logo.05916d79.svg",
-    "static/media/permanente.png": "/static/media/permanente.70d96101.png",
-    "static/media/situacional.png": "/static/media/situacional.d33e9429.png",
-    "static/media/temporaria.png": "/static/media/temporaria.5c2378b3.png"
+    "main.js": "/a11y-tests/static/js/main.14e9a1a7.chunk.js",
+    "main.js.map": "/a11y-tests/static/js/main.14e9a1a7.chunk.js.map",
+    "runtime~main.js": "/a11y-tests/static/js/runtime~main.e03c795b.js",
+    "runtime~main.js.map": "/a11y-tests/static/js/runtime~main.e03c795b.js.map",
+    "static/js/2.a047aaeb.chunk.js": "/a11y-tests/static/js/2.a047aaeb.chunk.js",
+    "static/js/2.a047aaeb.chunk.js.map": "/a11y-tests/static/js/2.a047aaeb.chunk.js.map",
+    "index.html": "/a11y-tests/index.html",
+    "precache-manifest.97e5659a7dbafe1f69f67f3667a340d3.js": "/a11y-tests/precache-manifest.97e5659a7dbafe1f69f67f3667a340d3.js",
+    "service-worker.js": "/a11y-tests/service-worker.js",
+    "static/media/acessibilidade.png": "/a11y-tests/static/media/acessibilidade.d6d91aa4.png",
+    "static/media/default.png": "/a11y-tests/static/media/default.5460d49f.png",
+    "static/media/logo-white.svg": "/a11y-tests/static/media/logo-white.27aa7520.svg",
+    "static/media/logo.svg": "/a11y-tests/static/media/logo.05916d79.svg",
+    "static/media/permanente.png": "/a11y-tests/static/media/permanente.70d96101.png",
+    "static/media/situacional.png": "/a11y-tests/static/media/situacional.d33e9429.png",
+    "static/media/temporaria.png": "/a11y-tests/static/media/temporaria.5c2378b3.png"
   }
 }
