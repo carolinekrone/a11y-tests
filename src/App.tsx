@@ -1,6 +1,6 @@
-import { GlobalCss, ThemeProvider } from "bold-ui";
 import React from "react";
 import Home from "./Home";
+import { ThemeProvider, GlobalCss } from "bold-ui";
 
 function App() {
   const globalStyles = {

@@ -10,7 +10,7 @@ import {
 } from "bold-ui";
 import React from "react";
 import NewsletterForm from "./NewsletterForm";
-import { MenuDropdownButton } from "./MenuDropdownButton";
+import MenuDropdownButton from "./MenuDropdownButton";
 import TabChecklist from "./TabChecklist";
 import TiposSwitcher from "./TiposSwitcher";
 

@@ -1,9 +1,10 @@
 import React, { useRef, useState } from "react";
 import { Button, Icon, Dropdown, DropdownItem } from "bold-ui";
 
-export function MenuDropdownButton() {
+function MenuDropdownButton() {
   const buttonRef = useRef<HTMLButtonElement>();
   const [open, setOpen] = useState(false);
+
   return (
     <>
       <Button
@@ -44,3 +45,5 @@ export function MenuDropdownButton() {
     </>
   );
 }
+
+export default MenuDropdownButton;
