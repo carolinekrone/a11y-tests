@@ -35,16 +35,22 @@ function NewsletterForm() {
           <Cell xs={12} lg={12}>
             <TextField label="Profissão" name="occupation" />
           </Cell>
-          <Cell xs={6}>
+          <Cell xs={12}>
             <FormControl label="Frequência dos e-mails">
               <HFlow>
-                <RadioField name="frequencia" value="Semanal" label="Semanal" />
-                <RadioField
-                  name="frequencia"
-                  value="Quinzenal"
-                  label="Quinzenal"
-                />
-                <RadioField name="frequencia" value="Mensal" label="Mensal" />
+                <div role="radiogroup" aria-label="Frequência dos e-mails">
+                  <RadioField
+                    name="frequencia"
+                    value="Semanal"
+                    label="Semanal"
+                  />
+                  <RadioField
+                    name="frequencia"
+                    value="Quinzenal"
+                    label="Quinzenal"
+                  />
+                  <RadioField name="frequencia" value="Mensal" label="Mensal" />
+                </div>
               </HFlow>
             </FormControl>
           </Cell>
