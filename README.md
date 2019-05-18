@@ -1,6 +1,6 @@
 # a11y-tests
 
-O site é Acessibilidade Digital é um Projeto de Conclusão em Design da Universidade Federal de Santa Catarina, produzido por <a href="https://twitter.com/carolinekrone">Caroline Krone</a>.
+O site é Acessibilidade Digital é um Projeto de Conclusão de Curso em Design da Universidade Federal de Santa Catarina, produzido por <a href="https://twitter.com/carolinekrone">Caroline Krone</a>.
 <br />
 Caso tenha alguma pergunta entre em contato pelo e-mail ou abra
 uma issue no
