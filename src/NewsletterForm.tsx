@@ -100,7 +100,7 @@ const validate = (values: any) => {
 
   if (!values.email) {
     errors.email = "E-mail é obrigatório";
-  } else if (!values.email.match(/^([\w.%+-]+)@[a-zA-Z0-9]+\.[A-Za-z]+$/)) {
+  } else if (!values.email.match(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9]+\.[A-Za-z]+$/)) {
     errors.email = "Este endereço de e-mail não é válido";
   }
 
